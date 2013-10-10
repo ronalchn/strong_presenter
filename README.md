@@ -72,7 +72,7 @@ remains in the controller where it arguably belongs.
 
 ```erb
 <% @user_presenter.presents :username, :name, :email do |key, value| %>
-  <b><%= UserPresenter.label(key).capitalize %>:</b> <%= value %><br>
+  <b><%= UserPresenter.label(key) %>:</b> <%= value %><br>
 <% end %>
 ```
 
@@ -134,7 +134,7 @@ Then the view can use each presenter, to display only the columns a user is perm
 ```
 
 Here, we use filter to check which of the columns are visible, just like `presents` does. It returns an
-array of only the visible columns, and `to_labels` is a method added to the array to allow conversion label form.
+array of only the visible columns, and `to_labels` is a method added to the array to allow conversion to label form.
 
 This also allows mass presentation based on GET parameter input, for example:
 
