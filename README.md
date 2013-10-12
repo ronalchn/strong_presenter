@@ -6,9 +6,9 @@ Adding an explicit `permit` interface allows authorization logic to be pushed ba
 
 When displaying a datatable, there is no need to call `can? :read_email_column, @user` in both the table headings, and as each row is displayed. The permission check can be performed once in the controller.
 
-This gem puts presenters in `app/presenters`, not `app/decorators`, because not all decorators are presenters. It better separates the different class types in your application. Presenters should be providing a read-only interface to a model. Variable setters should not be delegated through the presenter. On the other hand, decorators add features to a model, and can very well delegate setters methods to the model. However, they may be used for other reasons, such as in domain-specific logic. We don't want to mix presenter classes with decorator classes that may be used for domain-specific logic.
+This gem is opinionated. It puts presenters in `app/presenters`, not `app/decorators`, because not all decorators are presenters. Presenters should be providing a read-only interface to a model - variable setters should not be delegated through the presenter. On the other hand, decorators add features to a model, and can very well delegate setters methods to the model. We should not mix presenters with general-purpose decorators. By default, these presenters are also not decorators - because each presenter hides unnecessary methods on the base object, a presenter will, by default, hide the methods of any other presenter it is stacked on top of. To share common presenter methods, package them in modules to be included.
 
-While there exist other presenter gems, we hope to provide a more natural interface to create your presenters. This gem is opinionated - presenters should be in `app/presenters`, read-only interfaces to the underlying models, and not mixed with general-purpose decorators.
+While there exist other presenter gems, we hope to provide a more natural interface to create your presenters.
 
 ## Installation
 
@@ -31,7 +31,7 @@ Or install it yourself as:
 Create a new presenter:
 
 ```ruby    
-class ApplicationPresenter < StrongPresenter::Base
+class ApplicationPresenter < StrongPresenter::BasePresenter
 end
 
 class UserPresenter < ApplicationPresenter
@@ -50,7 +50,7 @@ Use the presenter on your object in your controller
 class UserController < ApplicationController
   def show
     @user = User.find(params[:id])
-    @user_presenter = UserPresenter.wrap(@user).permit *visible_attributes
+    @user_presenter = UserPresenter.new(@user).permit *visible_attributes
   end
 
   private
@@ -106,11 +106,10 @@ Labels can be retrieved by using the field/attribute by calling `label` with the
 
 If no label was explicitly assigned, it is simply converted to a string and humanized.
 
-Labels can be useful when used in a datatable to display collections. The controller can wrap
-a collection using `wrap_each`:
+Labels can be useful when used in a datatable to display collections. We can get the corresponding presenter for a collection using the `Collection` constant:
 
 ```ruby
-  @users_presenter = UserPresenter.wrap_each(@users).permit( *visible_attributes )
+  @users_presenter = UserPresenter::Collection.new(@users).permit( *visible_attributes )
 ```
 
 Then the view can use each presenter, to display only the columns a user is permitted to view.
@@ -143,6 +142,11 @@ This also allows mass presentation based on GET parameter input, for example:
 ```
 
 Because of the `permit` checks, there is no danger that private information will be revealed.
+
+## Acknowledgements
+
+- [Draper](https://github.com/drapergem/draper) - some features/code will be copied from this gem. Thanks!
+- https://github.com/railscasts/287-presenters-from-scratch/
 
 ## License
 
