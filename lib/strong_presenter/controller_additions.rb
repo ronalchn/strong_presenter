@@ -36,30 +36,14 @@ module StrongPresenter
         options = variables.extract_options!
         options.assert_valid_keys(:with, :only, :except)
 
-        factory = StrongPresenter::Factory.new(options.slice!(:only, :except))
-        options.each { |k,v| options[k] = Array(v).map(&:to_sym) unless v.nil? }
+        constructor = StrongPresenter::PresenterHelperConstructor.new(self, block, options)
 
         variables.each do |variable|
-          object = "@#{variable}"
-          presenter = "@#{variable}_presenter"
-
-          shadowed_method = nil
-          shadowed_method = instance_method variable if method_defined? variable # alias_method_chain without name pollution
-
-          define_method variable do |*args|
-            unless (options[:only].nil? || options[:only].include?(action_name.to_sym)) && 
-                   (options[:except].nil? || !options[:except].include?(action_name.to_sym)) # scoped by controller action?
-              return shadowed_method.bind(self).call(*args) if !shadowed_method.nil? # call old method if it existed
-              raise NoMethodError # method does not exist
-            end
-            raise ArgumentError.new("wrong number of arguments (#{args.size} for 0)") unless args.empty?
-            return instance_variable_get(presenter) if instance_variable_defined?(presenter)
-            instance_variable_set presenter, factory.wrap(instance_variable_get(object)) { |presenter| self.instance_exec presenter, &block if block }
-          end
-
+          constructor.call(variable)
           helper_method variable
         end
       end
+
     end
   end
 end

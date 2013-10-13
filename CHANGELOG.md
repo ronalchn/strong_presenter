@@ -7,7 +7,7 @@
   - ViewContext, HelperProxy - compared to my HelperProxy trying to include various rails modules, this expose methods like `current_user` as well.
   - test integration - ties in with ViewContext.
   - Gemfile, .travis.yml, .yardopts, Rakefile, Guardfile, .rspec
-- Features from Draper gem with substantial modifications
+- Features derived from the Draper gem with substantial modifications
   - factory - remove many options, some simplifications.
   - DecoratesAssigned -> ControllerAdditions - :only, :except options, execute block instead of passing :context-like options.
   - CollectionDecorator -> CollectionPresenter
