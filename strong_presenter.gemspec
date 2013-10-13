@@ -22,7 +22,6 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'request_store', '~> 1.0.3'
   gem.add_dependency 'activemodel', '>= 3.0'
 
-  gem.add_development_dependency 'debugger'
   gem.add_development_dependency 'rake', '>= 0.9.2'
   gem.add_development_dependency 'rspec', '~> 2.12'
   gem.add_development_dependency 'rspec-mocks', '>= 2.12.1'

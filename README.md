@@ -1,3 +1,9 @@
+[![Gem Version](https://badge.fury.io/rb/strong_presenter.png)](http://badge.fury.io/rb/strong_presenter)
+[![Build Status](https://travis-ci.org/ronalchn/strong_presenter.png?branch=master)](https://travis-ci.org/ronalchn/strong_presenter)
+[![Dependency Status](https://gemnasium.com/ronalchn/strong_presenter.png)](https://gemnasium.com/ronalchn/strong_presenter)
+[![Coverage Status](https://coveralls.io/repos/ronalchn/strong_presenter/badge.png)](https://coveralls.io/r/ronalchn/strong_presenter)
+[![Code Climate](https://codeclimate.com/github/ronalchn/strong_presenter.png)](https://codeclimate.com/github/ronalchn/strong_presenter)
+
 # StrongPresenter
 
 StrongPresenter lets you add presenters to your application, along with strong_parameters-inspired permit logic to handle mass presentations, where each user may have permision to view different fields.

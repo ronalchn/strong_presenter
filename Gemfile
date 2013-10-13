@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 gemspec
 
+gem 'coveralls', require: false, platforms: [:mri_19, :mri_20]
+
 platforms :ruby do
   gem "sqlite3"
 end
