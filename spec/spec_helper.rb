@@ -1,6 +1,6 @@
 begin
   require 'coveralls'
-  Coveralls.wear!
+  Coveralls.wear_merged!
 rescue LoadError
 end
 

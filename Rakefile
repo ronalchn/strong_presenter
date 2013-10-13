@@ -1,6 +1,9 @@
 require 'rake'
 require 'bundler/gem_tasks'
 require 'rspec/core/rake_task'
+require 'coveralls/rake/task'
+
+Coveralls::RakeTask.new
 
 def run_in_dummy_app(command)
   success = system("cd spec/dummy && #{command}")
@@ -10,7 +13,7 @@ end
 task "default" => "ci"
 
 desc "Run all tests for CI"
-task "ci" => "spec"
+task "ci" => ["spec", 'coveralls:push']
 
 desc "Run all specs"
 task "spec" => "spec:all"
