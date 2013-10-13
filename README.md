@@ -66,13 +66,14 @@ Use the presenter in the view:
 Avatar: <%= @user_presenter.avatar %>
 ```
 
-Or use mass presentation to present multiple fields/attributes at once. Notice that if `visible_attributes`
+Or use mass presentation to present multiple attributes at once. Notice that if `visible_attributes`
 does not include name or email, they will not show. The advantage is that authorization logic
 remains in the controller where it arguably belongs.
 
 ```erb
-<% @user_presenter.presents :username, :name, :email do |key, value| %>
-  <b><%= UserPresenter.label(key) %>:</b> <%= value %><br>
+<% fields = { :username => "Username", :name => "Name", :email => "E-mail" } %>
+<% @user_presenter.presents *fields.keys do |key, value| %>
+  <b><%= fields[key] %>:</b> <%= value %><br>
 <% end %>
 ```
 
@@ -89,24 +90,7 @@ method can be used. For example:
 In this case, since `permit` was not passed `:avatar`, it will not be presented. To remove authorization checks
 from mass presentations, simply call `permit!` on an instance of a presenter, or on the class (to disable for all instances).
 
-Fields or attributes can be assigned a label, by calling `label` with a hash.
-
-```ruby
-class UserPresenter < ApplicationPresenter
-  ...
-  label :email => "E-mail", :name => "Real Name"
-end
-```
-
-Labels can be retrieved by using the field/attribute by calling `label` with the symbol(s):
-
-```ruby
-  UserPresenter.label [:email, :username] # returns ["E-mail", "Username"]
-```
-
-If no label was explicitly assigned, it is simply converted to a string and humanized.
-
-Labels can be useful when used in a datatable to display collections. We can get the corresponding presenter for a collection using the `Collection` constant:
+We can get the corresponding presenter for a collection using the `Collection` constant:
 
 ```ruby
   @users_presenter = UserPresenter::Collection.new(@users).permit( *visible_attributes )
@@ -115,16 +99,16 @@ Labels can be useful when used in a datatable to display collections. We can get
 Then the view can use each presenter, to display only the columns a user is permitted to view.
 
 ```erb
-<% fields = [:username, :name, :email] %>
+<% fields = { :username => "Username", :name => "Name", :email => "E-mail" } %>
 <table>
   <tr>
-    <% @users_presenter.filter( *fields ).to_labels.each do |label| %>
-      <th><%= label %></th>
+    <% @users_presenter.filter( *fields.keys ) do |key| %>
+      <th><%= fields[key] %></th>
     <% end %>
   </tr>
   <% @users_presenter.each do |user_presenter| %>
     <tr>
-      <% user_presenter.presents( *fields ).each do |value| %>
+      <% user_presenter.presents( *fields.keys ).each do |value| %>
         <%= content_tag :td, value %>
       <% end %>
     </tr>
@@ -133,7 +117,7 @@ Then the view can use each presenter, to display only the columns a user is perm
 ```
 
 Here, we use filter to check which of the columns are visible, just like `presents` does. It returns an
-array of only the visible columns, and `to_labels` is a method added to the array to allow conversion to label form.
+array of only the visible columns, and we use our `fields` hash to label it.
 
 This also allows mass presentation based on GET parameter input, for example:
 

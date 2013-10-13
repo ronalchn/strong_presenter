@@ -1,0 +1,4342 @@
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (145.7ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:01:30 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:01:30 UTC +00:00]]
+  [1m[36m (411.4ms)[0m  [1mcommit transaction[0m
+  Rendered post_mailer/presented_email.html.erb within layouts/application (149.3ms)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00]]
+  [1m[35m (27.4ms)[0m  commit transaction
+  Rendered post_mailer/presented_email.html.erb within layouts/application (5.2ms)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00]]
+  [1m[36m (27.1ms)[0m  [1mcommit transaction[0m
+  Rendered post_mailer/presented_email.html.erb within layouts/application (1.2ms)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00]]
+  [1m[35m (19.3ms)[0m  commit transaction
+  Rendered post_mailer/presented_email.html.erb within layouts/application (7.2ms)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00]]
+  [1m[36m (23.2ms)[0m  [1mcommit transaction[0m
+  Rendered post_mailer/presented_email.html.erb within layouts/application (1.5ms)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00]]
+  [1m[35m (23.3ms)[0m  commit transaction
+  Rendered post_mailer/presented_email.html.erb within layouts/application (2.0ms)
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00]]
+  [1m[36m (26.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00]]
+  [1m[35m (20.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00]]
+  [1m[36m (12.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00]]
+  [1m[35m (27.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00]]
+  [1m[36m (30.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00]]
+  [1m[35m (30.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (15.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00]]
+  [1m[36m (10.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00]]
+  [1m[35m (14.9ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00]]
+  [1m[36m (29.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00]]
+  [1m[35m (21.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:01:31 UTC +00:00]]
+  [1m[36m (27.5ms)[0m  [1mcommit transaction[0m
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (17.8ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:08:42 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:08:42 UTC +00:00]]
+  [1m[36m (78.2ms)[0m  [1mcommit transaction[0m
+  Rendered post_mailer/presented_email.html.erb within layouts/application (144.2ms)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (5.4ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:08:42 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:08:42 UTC +00:00]]
+  [1m[35m (21.9ms)[0m  commit transaction
+  Rendered post_mailer/presented_email.html.erb within layouts/application (2.1ms)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:08:42 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:08:42 UTC +00:00]]
+  [1m[36m (27.8ms)[0m  [1mcommit transaction[0m
+  Rendered post_mailer/presented_email.html.erb within layouts/application (7.5ms)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:08:42 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:08:42 UTC +00:00]]
+  [1m[35m (27.5ms)[0m  commit transaction
+  Rendered post_mailer/presented_email.html.erb within layouts/application (1.3ms)
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:08:42 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:08:42 UTC +00:00]]
+  [1m[36m (11.0ms)[0m  [1mcommit transaction[0m
+  Rendered post_mailer/presented_email.html.erb within layouts/application (1.5ms)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:08:42 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:08:42 UTC +00:00]]
+  [1m[35m (39.8ms)[0m  commit transaction
+  Rendered post_mailer/presented_email.html.erb within layouts/application (1.7ms)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (25.2ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:16:35 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:16:35 UTC +00:00]]
+  [1m[36m (73.1ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (172.4ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (191.4ms)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (10.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:16:36 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:16:36 UTC +00:00]]
+  [1m[35m (7.9ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (37.3ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (38.5ms)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:16:36 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:16:36 UTC +00:00]]
+  [1m[36m (20.7ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (18.6ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (30.1ms)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:16:36 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:16:36 UTC +00:00]]
+  [1m[35m (26.3ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (17.1ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (18.0ms)
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:16:36 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:16:36 UTC +00:00]]
+  [1m[36m (17.4ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (17.2ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (18.1ms)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (4.9ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:16:36 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:16:36 UTC +00:00]]
+  [1m[35m (29.2ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (20.7ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (21.9ms)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (128.1ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:37:25 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:37:25 UTC +00:00]]
+  [1m[36m (309.6ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (3.7ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (140.6ms)
+
+Sent mail to to@example.com (47.4ms)
+Date: Sat, 12 Oct 2013 20:37:26 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fc36765d7_2fa9cfe3d876415@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <!--<dt>StrongPresenter view context controller:</dt>
+  <dd id="controller"></dd>-->
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/30</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/30</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/30</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/30</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/30</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/30</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:37:26 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:37:26 UTC +00:00]]
+  [1m[35m (318.8ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (2.3ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (3.2ms)
+
+Sent mail to to@example.com (28.4ms)
+Date: Sat, 12 Oct 2013 20:37:26 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fc36d56b8_2fa9cfe3d876572@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <!--<dt>StrongPresenter view context controller:</dt>
+  <dd id="controller"></dd>-->
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/31</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/31</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/31</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/31</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/31</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/31</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:37:26 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:37:26 UTC +00:00]]
+  [1m[36m (343.4ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (1.6ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (2.4ms)
+
+Sent mail to to@example.com (18.6ms)
+Date: Sat, 12 Oct 2013 20:37:27 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fc3749f43_2fa9cfe3d87666@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <!--<dt>StrongPresenter view context controller:</dt>
+  <dd id="controller"></dd>-->
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/32</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/32</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/32</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/32</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/32</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/32</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:37:27 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:37:27 UTC +00:00]]
+  [1m[35m (587.0ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (2.3ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (3.3ms)
+
+Sent mail to to@example.com (14.8ms)
+Date: Sat, 12 Oct 2013 20:37:27 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fc37edd98_2fa9cfe3d87673e@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <!--<dt>StrongPresenter view context controller:</dt>
+  <dd id="controller"></dd>-->
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/33</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/33</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/33</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/33</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/33</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/33</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:37:28 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:37:28 UTC +00:00]]
+  [1m[36m (427.5ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (6.5ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (7.4ms)
+
+Sent mail to to@example.com (25.2ms)
+Date: Sat, 12 Oct 2013 20:37:28 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fc387673b_2fa9cfe3d8768b3@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <!--<dt>StrongPresenter view context controller:</dt>
+  <dd id="controller"></dd>-->
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/34</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/34</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/34</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/34</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/34</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/34</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:37:28 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:37:28 UTC +00:00]]
+  [1m[35m (170.2ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (2.0ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (2.7ms)
+
+Sent mail to to@example.com (30.2ms)
+Date: Sat, 12 Oct 2013 20:37:28 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fc38b8ca5_2fa9cfe3d8769d4@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <!--<dt>StrongPresenter view context controller:</dt>
+  <dd id="controller"></dd>-->
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/35</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/35</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/35</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/35</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/35</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/35</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (165.0ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:38:50 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:38:50 UTC +00:00]]
+  [1m[36m (103.6ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (4.4ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (173.4ms)
+
+Sent mail to to@example.com (60.5ms)
+Date: Sat, 12 Oct 2013 20:38:51 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fc8b6ab5_3064960be05951b@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller"></dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/36</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/36</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/36</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/36</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/36</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/36</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:38:51 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:38:51 UTC +00:00]]
+  [1m[35m (22.5ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (6.8ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (7.5ms)
+
+Sent mail to to@example.com (19.8ms)
+Date: Sat, 12 Oct 2013 20:38:51 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fc8b2416b_3064960be0596c@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller"></dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/37</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/37</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/37</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/37</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/37</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/37</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:38:51 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:38:51 UTC +00:00]]
+  [1m[36m (15.4ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (2.0ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (7.7ms)
+
+Sent mail to to@example.com (19.5ms)
+Date: Sat, 12 Oct 2013 20:38:51 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fc8b379d2_3064960be05973f@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller"></dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/38</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/38</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/38</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/38</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/38</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/38</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (27.1ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:38:51 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:38:51 UTC +00:00]]
+  [1m[35m (30.3ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (6.4ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (7.1ms)
+
+Sent mail to to@example.com (17.7ms)
+Date: Sat, 12 Oct 2013 20:38:51 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fc8b53942_3064960be05983f@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller"></dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/39</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/39</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/39</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/39</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/39</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/39</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:38:51 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:38:51 UTC +00:00]]
+  [1m[36m (25.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (6.4ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (7.3ms)
+
+Sent mail to to@example.com (27.9ms)
+Date: Sat, 12 Oct 2013 20:38:51 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fc8b6597a_3064960be059911@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller"></dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/40</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/40</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/40</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/40</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/40</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/40</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:38:51 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:38:51 UTC +00:00]]
+  [1m[35m (26.6ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (6.5ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (7.8ms)
+
+Sent mail to to@example.com (38.6ms)
+Date: Sat, 12 Oct 2013 20:38:51 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fc8b7e34b_3064960be06004d@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller"></dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/41</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/41</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/41</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/41</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/41</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/41</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (162.8ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:39:44 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:39:44 UTC +00:00]]
+  [1m[36m (49.7ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (10.8ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (155.7ms)
+
+Sent mail to to@example.com (38.7ms)
+Date: Sat, 12 Oct 2013 20:39:45 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fcc1715be_3077bb73e4425f5@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/42</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/42</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/42</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/42</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/42</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/42</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:39:45 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:39:45 UTC +00:00]]
+  [1m[35m (42.8ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (2.4ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (3.2ms)
+
+Sent mail to to@example.com (14.7ms)
+Date: Sat, 12 Oct 2013 20:39:45 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fcc18eb83_3077bb73e442639@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/43</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/43</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/43</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/43</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/43</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/43</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:39:45 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:39:45 UTC +00:00]]
+  [1m[36m (25.3ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (2.2ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (3.7ms)
+
+Sent mail to to@example.com (29.3ms)
+Date: Sat, 12 Oct 2013 20:39:45 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fcc1a519a_3077bb73e4427b0@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/44</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/44</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/44</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/44</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/44</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/44</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:39:45 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:39:45 UTC +00:00]]
+  [1m[35m (19.5ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (2.6ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (3.1ms)
+
+Sent mail to to@example.com (28.3ms)
+Date: Sat, 12 Oct 2013 20:39:45 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fcc1bb116_3077bb73e4428fc@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/45</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/45</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/45</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/45</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/45</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/45</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:39:45 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:39:45 UTC +00:00]]
+  [1m[36m (34.9ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (6.8ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (7.6ms)
+
+Sent mail to to@example.com (69.5ms)
+Date: Sat, 12 Oct 2013 20:39:45 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fcc1d528c_3077bb73e4429f3@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/46</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/46</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/46</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/46</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/46</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/46</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:39:45 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:39:45 UTC +00:00]]
+  [1m[35m (21.3ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (7.4ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (8.0ms)
+
+Sent mail to to@example.com (76.7ms)
+Date: Sat, 12 Oct 2013 20:39:46 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fcc2913e_3077bb73e4430be@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/47</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/47</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/47</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/47</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/47</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/47</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (162.4ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:40:15 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:15 UTC +00:00]]
+  [1m[36m (54.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (8.4ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (157.7ms)
+
+Sent mail to to@example.com (49.2ms)
+Date: Sat, 12 Oct 2013 20:40:15 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fcdfebf96_30824d6bd843815@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/48</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/48</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/48</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/48</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/48</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/48</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:40:15 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:15 UTC +00:00]]
+  [1m[35m (30.4ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (17.6ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (18.3ms)
+
+Sent mail to to@example.com (14.0ms)
+Date: Sat, 12 Oct 2013 20:40:16 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fce016cb2_30824d6bd8439fa@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/49</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/49</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/49</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/49</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/49</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/49</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:40:16 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:16 UTC +00:00]]
+  [1m[36m (30.4ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (3.0ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (9.1ms)
+
+Sent mail to to@example.com (17.6ms)
+Date: Sat, 12 Oct 2013 20:40:16 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fce033e24_30824d6bd84405a@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/50</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/50</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/50</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/50</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/50</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/50</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (4.5ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:40:16 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:16 UTC +00:00]]
+  [1m[35m (22.3ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (2.0ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (2.7ms)
+
+Sent mail to to@example.com (21.7ms)
+Date: Sat, 12 Oct 2013 20:40:16 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fce04cc82_30824d6bd8441d0@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/51</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/51</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/51</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/51</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/51</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/51</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:40:16 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:16 UTC +00:00]]
+  [1m[36m (46.6ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (16.7ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (17.7ms)
+
+Sent mail to to@example.com (36.0ms)
+Date: Sat, 12 Oct 2013 20:40:16 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fce08c205_30824d6bd84426c@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/52</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/52</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/52</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/52</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/52</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/52</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (21.0ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:40:16 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:16 UTC +00:00]]
+  [1m[35m (13.8ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (7.8ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (9.0ms)
+
+Sent mail to to@example.com (46.0ms)
+Date: Sat, 12 Oct 2013 20:40:16 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5258fce0aeb92_30824d6bd8443a9@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/53</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/53</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/53</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/53</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/53</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/53</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:40:16 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:16 UTC +00:00]]
+  [1m[36m (31.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:40:16 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:16 UTC +00:00]]
+  [1m[35m (48.2ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:40:16 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:16 UTC +00:00]]
+  [1m[36m (33.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:40:16 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:16 UTC +00:00]]
+  [1m[35m (10.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:40:17 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:17 UTC +00:00]]
+  [1m[36m (11.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:40:17 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:17 UTC +00:00]]
+  [1m[35m (15.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:40:17 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:17 UTC +00:00]]
+  [1m[36m (26.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:40:17 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:17 UTC +00:00]]
+  [1m[35m (10.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:40:17 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:17 UTC +00:00]]
+  [1m[36m (56.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:40:17 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:17 UTC +00:00]]
+  [1m[35m (11.1ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:40:17 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:17 UTC +00:00]]
+  [1m[36m (36.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sat, 12 Oct 2013 07:40:17 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:17 UTC +00:00]]
+  [1m[35m (11.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sat, 12 Oct 2013 07:40:17 UTC +00:00], ["updated_at", Sat, 12 Oct 2013 07:40:17 UTC +00:00]]
+  [1m[36m (38.2ms)[0m  [1mcommit transaction[0m
+  [1m[36m (32.9ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (15.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (12.3ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (11.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121019115657')[0m
+  [1m[36m (990.7ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (580.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (719.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.2ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (452.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121019115657')[0m
+  [1m[36m (4212.0ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1383.0ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (6340.5ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (2505.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121019115657')[0m
+  [1m[36m (1.2ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+A controller test: test_0001_has an independent view context
+------------------------------------------------------------
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (1.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+A controller test: test_0002_has an independent view context
+------------------------------------------------------------
+  [1m[35m (16.6ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+A mailer test: test_0001_has an independent view context
+--------------------------------------------------------
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+A mailer test: test_0002_has an independent view context
+--------------------------------------------------------
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------
+A presenter test: test_0001_has an independent view context
+-----------------------------------------------------------
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------
+A presenter test: test_0002_has an independent view context
+-----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+A presenter test: test_0001_can sign in a real user
+---------------------------------------------------
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+A presenter test: test_0002_can sign in a mock user
+---------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+A presenter test: test_0003_can sign in a real admin
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+A presenter test: test_0004_can sign in a mock admin
+----------------------------------------------------
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+A presenter test: test_0005_can sign out a real user
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+A presenter test: test_0006_can sign out a mock user
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+A presenter test: test_0007_can sign out without a user
+-------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (4.8ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+A presenter test: test_0008_is backwards-compatible
+---------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------
+A presenter test: test_0001_can access helpers through `helper`
+---------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------
+A presenter test: test_0002_can access helpers through `helpers`
+----------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------
+A presenter test: test_0003_can access helpers through `h`
+----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------
+A presenter test: test_0004_gets the same helper object as a presenter
+----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+Any presenter: test_0001_is a presenter test
+--------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+Any presenter test: test_0001_is a presenter test
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+AnyPresenter: test_0001_is a presenter test
+-------------------------------------------
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+AnyPresenterTest: test_0001_is a presenter test
+-----------------------------------------------
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+----------------------------------------
+DeviseTest: test_backwards_compatibility
+----------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-------------------------------------
+DeviseTest: test_sign_in_a_mock_admin
+-------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------
+DeviseTest: test_sign_in_a_mock_user
+------------------------------------
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-------------------------------------
+DeviseTest: test_sign_in_a_real_admin
+-------------------------------------
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------
+DeviseTest: test_sign_in_a_real_user
+------------------------------------
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-------------------------------------
+DeviseTest: test_sign_out_a_mock_user
+-------------------------------------
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (26.7ms)[0m  [1mbegin transaction[0m
+-------------------------------------
+DeviseTest: test_sign_out_a_real_user
+-------------------------------------
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------
+DeviseTest: test_sign_out_without_a_user
+----------------------------------------
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+HelpersTest: test_access_helpers_through_h
+------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+HelpersTest: test_access_helpers_through_helper
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+HelpersTest: test_access_helpers_through_helpers
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------
+HelpersTest: test_same_helper_object_as_presenters
+--------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+ProductPresenter: test_0001_is a presenter test
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (15.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+ProductPresenter: test_0001_is a presenter test
+-----------------------------------------------
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+ProductsPresenter: test_0001_is a presenter test
+------------------------------------------------
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (165.0ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:30:11 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:11 UTC +00:00]]
+  [1m[36m (143.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 01:30:11 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:11 UTC +00:00]]
+  [1m[35m (36.9ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:30:11 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:11 UTC +00:00]]
+  [1m[36m (32.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 01:30:11 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:11 UTC +00:00]]
+  [1m[35m (31.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:30:11 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:11 UTC +00:00]]
+  [1m[36m (51.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (11.3ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 01:30:12 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:12 UTC +00:00]]
+  [1m[35m (75.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:30:12 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:12 UTC +00:00]]
+  [1m[36m (18.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 01:30:12 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:12 UTC +00:00]]
+  [1m[35m (22.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:30:12 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:12 UTC +00:00]]
+  [1m[36m (27.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 01:30:12 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:12 UTC +00:00]]
+  [1m[35m (16.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:30:12 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:12 UTC +00:00]]
+  [1m[36m (51.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 01:30:12 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:12 UTC +00:00]]
+  [1m[35m (43.7ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:30:12 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:12 UTC +00:00]]
+  [1m[36m (56.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 01:30:12 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:12 UTC +00:00]]
+  [1m[35m (55.5ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (4.0ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (203.1ms)
+
+Sent mail to to@example.com (59.7ms)
+Date: Sun, 13 Oct 2013 14:30:13 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5259f7a5360b9_3b04db33dc69821@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/14</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/14</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/14</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/14</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/14</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/14</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (16.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:30:13 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:13 UTC +00:00]]
+  [1m[36m (183.4ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (1.9ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (2.6ms)
+
+Sent mail to to@example.com (33.3ms)
+Date: Sun, 13 Oct 2013 14:30:13 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5259f7a583c77_3b04db33dc6998f@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/15</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/15</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/15</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/15</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/15</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/15</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 01:30:13 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:13 UTC +00:00]]
+  [1m[35m (36.8ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (20.7ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (21.7ms)
+
+Sent mail to to@example.com (39.1ms)
+Date: Sun, 13 Oct 2013 14:30:13 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5259f7a5a3988_3b04db33dc70023@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/16</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/16</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/16</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/16</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/16</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/16</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:30:13 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:13 UTC +00:00]]
+  [1m[36m (50.7ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (8.0ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (10.2ms)
+
+Sent mail to to@example.com (27.5ms)
+Date: Sun, 13 Oct 2013 14:30:13 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5259f7a5f21ae_3b04db33dc7019@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/17</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/17</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/17</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/17</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/17</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/17</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 01:30:14 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:14 UTC +00:00]]
+  [1m[35m (27.2ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (23.4ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (24.6ms)
+
+Sent mail to to@example.com (22.1ms)
+Date: Sun, 13 Oct 2013 14:30:14 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5259f7a622173_3b04db33dc7027c@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/18</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/18</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/18</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/18</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/18</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/18</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:30:14 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:30:14 UTC +00:00]]
+  [1m[36m (22.0ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (8.4ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (9.5ms)
+
+Sent mail to to@example.com (25.8ms)
+Date: Sun, 13 Oct 2013 14:30:14 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5259f7a63f525_3b04db33dc70399@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/19</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/19</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/19</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/19</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/19</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/19</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (159.8ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00]]
+  [1m[36m (98.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (25.0ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00]]
+  [1m[35m (83.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00]]
+  [1m[36m (26.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00]]
+  [1m[35m (17.1ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00]]
+  [1m[36m (85.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00]]
+  [1m[35m (36.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (6.4ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00]]
+  [1m[36m (11.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00]]
+  [1m[35m (27.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00]]
+  [1m[36m (38.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:19 UTC +00:00]]
+  [1m[35m (47.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (27.9ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:43:20 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:20 UTC +00:00]]
+  [1m[36m (6.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 01:43:20 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:20 UTC +00:00]]
+  [1m[35m (17.8ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:43:20 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:20 UTC +00:00]]
+  [1m[36m (38.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 01:43:20 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:20 UTC +00:00]]
+  [1m[35m (48.0ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (18.2ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (240.9ms)
+
+Sent mail to to@example.com (212.7ms)
+Date: Sun, 13 Oct 2013 14:43:20 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5259fab8e4e0d_3c22ecdbdc7187f@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/33</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/33</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/33</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/33</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/33</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/33</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:43:21 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:21 UTC +00:00]]
+  [1m[36m (39.5ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (18.6ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (20.0ms)
+
+Sent mail to to@example.com (18.1ms)
+Date: Sun, 13 Oct 2013 14:43:21 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5259fab943a10_3c22ecdbdc719d@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/34</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/34</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/34</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/34</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/34</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/34</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (6.0ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 01:43:21 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:21 UTC +00:00]]
+  [1m[35m (61.2ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (7.8ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (8.7ms)
+
+Sent mail to to@example.com (19.3ms)
+Date: Sun, 13 Oct 2013 14:43:21 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5259fab961a24_3c22ecdbdc72012@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/35</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/35</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/35</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/35</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/35</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/35</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:43:21 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:21 UTC +00:00]]
+  [1m[36m (23.6ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (9.4ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (10.6ms)
+
+Sent mail to to@example.com (19.4ms)
+Date: Sun, 13 Oct 2013 14:43:21 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5259fab97bf99_3c22ecdbdc721b2@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/36</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/36</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/36</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/36</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/36</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/36</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 01:43:21 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:21 UTC +00:00]]
+  [1m[35m (21.4ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (2.9ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (3.3ms)
+
+Sent mail to to@example.com (46.9ms)
+Date: Sun, 13 Oct 2013 14:43:21 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5259fab98fa23_3c22ecdbdc72291@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/37</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/37</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/37</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/37</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/37</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/37</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (17.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 01:43:21 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 01:43:21 UTC +00:00]]
+  [1m[36m (68.5ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (8.3ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (9.2ms)
+
+Sent mail to to@example.com (25.5ms)
+Date: Sun, 13 Oct 2013 14:43:21 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <5259fab9bbc82_3c22ecdbdc7233e@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/38</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/38</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/38</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/38</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/38</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/38</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (60.3ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (16.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (20.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (17.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121019115657')[0m
+  [1m[36m (78.5ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (14.3ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (26.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (21.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20121019115657')[0m
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+A controller test: test_0001_has an independent view context
+------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+A controller test: test_0002_has an independent view context
+------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+A mailer test: test_0001_has an independent view context
+--------------------------------------------------------
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+A mailer test: test_0002_has an independent view context
+--------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------
+A presenter test: test_0001_has an independent view context
+-----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------
+A presenter test: test_0002_has an independent view context
+-----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+A presenter test: test_0001_can sign in a real user
+---------------------------------------------------
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+A presenter test: test_0002_can sign in a mock user
+---------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+A presenter test: test_0003_can sign in a real admin
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+A presenter test: test_0004_can sign in a mock admin
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (5.3ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+A presenter test: test_0005_can sign out a real user
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+A presenter test: test_0006_can sign out a mock user
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+A presenter test: test_0007_can sign out without a user
+-------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+A presenter test: test_0008_is backwards-compatible
+---------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------
+A presenter test: test_0001_can access helpers through `helper`
+---------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------
+A presenter test: test_0002_can access helpers through `helpers`
+----------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (6.6ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------
+A presenter test: test_0003_can access helpers through `h`
+----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------
+A presenter test: test_0004_gets the same helper object as a presenter
+----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+Any presenter: test_0001_is a presenter test
+--------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+Any presenter test: test_0001_is a presenter test
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+AnyPresenter: test_0001_is a presenter test
+-------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+AnyPresenterTest: test_0001_is a presenter test
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------
+DeviseTest: test_backwards_compatibility
+----------------------------------------
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------
+DeviseTest: test_sign_in_a_mock_admin
+-------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------
+DeviseTest: test_sign_in_a_mock_user
+------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------
+DeviseTest: test_sign_in_a_real_admin
+-------------------------------------
+  [1m[35m (11.6ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+------------------------------------
+DeviseTest: test_sign_in_a_real_user
+------------------------------------
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------
+DeviseTest: test_sign_out_a_mock_user
+-------------------------------------
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------
+DeviseTest: test_sign_out_a_real_user
+-------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------
+DeviseTest: test_sign_out_without_a_user
+----------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+HelpersTest: test_access_helpers_through_h
+------------------------------------------
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+HelpersTest: test_access_helpers_through_helper
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+HelpersTest: test_access_helpers_through_helpers
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------
+HelpersTest: test_same_helper_object_as_presenters
+--------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+ProductPresenter: test_0001_is a presenter test
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+ProductPresenter: test_0001_is a presenter test
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+ProductsPresenter: test_0001_is a presenter test
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (384.3ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:31:14 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:14 UTC +00:00]]
+  [1m[36m (556.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.9ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 03:31:15 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:15 UTC +00:00]]
+  [1m[35m (185.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:31:15 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:15 UTC +00:00]]
+  [1m[36m (27.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00]]
+  [1m[35m (47.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00]]
+  [1m[36m (37.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00]]
+  [1m[35m (65.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.9ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00]]
+  [1m[36m (11.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00]]
+  [1m[35m (29.8ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00]]
+  [1m[36m (20.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00]]
+  [1m[35m (22.4ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00]]
+  [1m[36m (38.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00]]
+  [1m[35m (19.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00]]
+  [1m[36m (11.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:16 UTC +00:00]]
+  [1m[35m (33.3ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (8.9ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (250.2ms)
+
+Sent mail to to@example.com (89.4ms)
+Date: Sun, 13 Oct 2013 16:31:17 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <525a140561964_48116dabdc438ce@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/14</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/14</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/14</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/14</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/14</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/14</dd>
+
+    <dt>Permit to present:</dt>
+    <dd id="permit_to_present">I am permitted</dd>
+    <dt>Unpermitted:</dt>
+    <dd id="unpermitted">Top Secret</dd>
+
+    <dt>Peek A Boo:</dt>
+    <dd id="peekaboo">BOO!</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:31:17 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:17 UTC +00:00]]
+  [1m[36m (661.2ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (2.1ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (2.8ms)
+
+Sent mail to to@example.com (12.8ms)
+Date: Sun, 13 Oct 2013 16:31:18 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <525a1406297b6_48116dabdc43978@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/15</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/15</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/15</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/15</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/15</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/15</dd>
+
+    <dt>Permit to present:</dt>
+    <dd id="permit_to_present">I am permitted</dd>
+    <dt>Unpermitted:</dt>
+    <dd id="unpermitted">Top Secret</dd>
+
+    <dt>Peek A Boo:</dt>
+    <dd id="peekaboo">BOO!</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 03:31:18 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:18 UTC +00:00]]
+  [1m[35m (931.5ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (30.3ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (31.5ms)
+
+Sent mail to to@example.com (23.5ms)
+Date: Sun, 13 Oct 2013 16:31:19 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <525a140737f45_48116dabdc44046@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/16</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/16</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/16</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/16</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/16</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/16</dd>
+
+    <dt>Permit to present:</dt>
+    <dd id="permit_to_present">I am permitted</dd>
+    <dt>Unpermitted:</dt>
+    <dd id="unpermitted">Top Secret</dd>
+
+    <dt>Peek A Boo:</dt>
+    <dd id="peekaboo">BOO!</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:31:19 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:19 UTC +00:00]]
+  [1m[36m (119.4ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (1.9ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (2.5ms)
+
+Sent mail to to@example.com (41.5ms)
+Date: Sun, 13 Oct 2013 16:31:19 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <525a140766dd5_48116dabdc441dd@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/17</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/17</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/17</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/17</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/17</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/17</dd>
+
+    <dt>Permit to present:</dt>
+    <dd id="permit_to_present">I am permitted</dd>
+    <dt>Unpermitted:</dt>
+    <dd id="unpermitted">Top Secret</dd>
+
+    <dt>Peek A Boo:</dt>
+    <dd id="peekaboo">BOO!</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (23.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 03:31:19 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:19 UTC +00:00]]
+  [1m[35m (12.1ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (2.3ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (3.2ms)
+
+Sent mail to to@example.com (20.5ms)
+Date: Sun, 13 Oct 2013 16:31:19 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <525a1407a5d67_48116dabdc44232@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/18</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/18</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/18</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/18</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/18</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/18</dd>
+
+    <dt>Permit to present:</dt>
+    <dd id="permit_to_present">I am permitted</dd>
+    <dt>Unpermitted:</dt>
+    <dd id="unpermitted">Top Secret</dd>
+
+    <dt>Peek A Boo:</dt>
+    <dd id="peekaboo">BOO!</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:31:19 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:31:19 UTC +00:00]]
+  [1m[36m (35.2ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (2.0ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (2.6ms)
+
+Sent mail to to@example.com (26.0ms)
+Date: Sun, 13 Oct 2013 16:31:19 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <525a1407bc0f2_48116dabdc443c1@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/19</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/19</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/19</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/19</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/19</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/19</dd>
+
+    <dt>Permit to present:</dt>
+    <dd id="permit_to_present">I am permitted</dd>
+    <dt>Unpermitted:</dt>
+    <dd id="unpermitted">Top Secret</dd>
+
+    <dt>Peek A Boo:</dt>
+    <dd id="peekaboo">BOO!</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+A controller test: test_0001_has an independent view context
+------------------------------------------------------------
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (5.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------------------
+A controller test: test_0002_has an independent view context
+------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+A mailer test: test_0001_has an independent view context
+--------------------------------------------------------
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------------
+A mailer test: test_0002_has an independent view context
+--------------------------------------------------------
+  [1m[35m (6.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------
+A presenter test: test_0001_has an independent view context
+-----------------------------------------------------------
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------------------
+A presenter test: test_0002_has an independent view context
+-----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+A presenter test: test_0001_can sign in a real user
+---------------------------------------------------
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+A presenter test: test_0002_can sign in a mock user
+---------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+A presenter test: test_0003_can sign in a real admin
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+A presenter test: test_0004_can sign in a mock admin
+----------------------------------------------------
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+A presenter test: test_0005_can sign out a real user
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------
+A presenter test: test_0006_can sign out a mock user
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------------
+A presenter test: test_0007_can sign out without a user
+-------------------------------------------------------
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------
+A presenter test: test_0008_is backwards-compatible
+---------------------------------------------------
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+---------------------------------------------------------------
+A presenter test: test_0001_can access helpers through `helper`
+---------------------------------------------------------------
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------
+A presenter test: test_0002_can access helpers through `helpers`
+----------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------
+A presenter test: test_0003_can access helpers through `h`
+----------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+----------------------------------------------------------------------
+A presenter test: test_0004_gets the same helper object as a presenter
+----------------------------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+--------------------------------------------
+Any presenter: test_0001_is a presenter test
+--------------------------------------------
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+-------------------------------------------------
+Any presenter test: test_0001_is a presenter test
+-------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-------------------------------------------
+AnyPresenter: test_0001_is a presenter test
+-------------------------------------------
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+AnyPresenterTest: test_0001_is a presenter test
+-----------------------------------------------
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+----------------------------------------
+DeviseTest: test_backwards_compatibility
+----------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------
+DeviseTest: test_sign_in_a_mock_admin
+-------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------
+DeviseTest: test_sign_in_a_mock_user
+------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-------------------------------------
+DeviseTest: test_sign_in_a_real_admin
+-------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------
+DeviseTest: test_sign_in_a_real_user
+------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+-------------------------------------
+DeviseTest: test_sign_out_a_mock_user
+-------------------------------------
+  [1m[35m (5.0ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-------------------------------------
+DeviseTest: test_sign_out_a_real_user
+-------------------------------------
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+----------------------------------------
+DeviseTest: test_sign_out_without_a_user
+----------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+------------------------------------------
+HelpersTest: test_access_helpers_through_h
+------------------------------------------
+  [1m[35m (0.7ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+HelpersTest: test_access_helpers_through_helper
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+HelpersTest: test_access_helpers_through_helpers
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+--------------------------------------------------
+HelpersTest: test_same_helper_object_as_presenters
+--------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+ProductPresenter: test_0001_is a presenter test
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+-----------------------------------------------
+ProductPresenter: test_0001_is a presenter test
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+------------------------------------------------
+ProductsPresenter: test_0001_is a presenter test
+------------------------------------------------
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (30.4ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:32:51 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:51 UTC +00:00]]
+  [1m[36m (95.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 03:32:51 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:51 UTC +00:00]]
+  [1m[35m (36.6ms)[0m  commit transaction
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:32:51 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:51 UTC +00:00]]
+  [1m[36m (25.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 03:32:51 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:51 UTC +00:00]]
+  [1m[35m (21.5ms)[0m  commit transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00]]
+  [1m[36m (57.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00]]
+  [1m[35m (18.8ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00]]
+  [1m[36m (16.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00]]
+  [1m[35m (39.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00]]
+  [1m[36m (37.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (6.3ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00]]
+  [1m[35m (23.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00]]
+  [1m[36m (60.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00]]
+  [1m[35m (20.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (13.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00]]
+  [1m[36m (30.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:52 UTC +00:00]]
+  [1m[35m (11.2ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (20.5ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (207.6ms)
+
+Sent mail to to@example.com (54.5ms)
+Date: Sun, 13 Oct 2013 16:32:53 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <525a146544388_4866c613e43909e@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/33</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/33</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/33</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/33</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/33</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/33</dd>
+
+    <dt>Permit to present:</dt>
+    <dd id="permit_to_present">I am permitted</dd>
+    <dt>Unpermitted:</dt>
+    <dd id="unpermitted">Top Secret</dd>
+
+    <dt>Peek A Boo:</dt>
+    <dd id="peekaboo">BOO!</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (4.9ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:32:53 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:53 UTC +00:00]]
+  [1m[36m (36.8ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (2.5ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (7.3ms)
+
+Sent mail to to@example.com (27.9ms)
+Date: Sun, 13 Oct 2013 16:32:53 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <525a146561d2a_4866c613e439184@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/34</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/34</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/34</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/34</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/34</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/34</dd>
+
+    <dt>Permit to present:</dt>
+    <dd id="permit_to_present">I am permitted</dd>
+    <dt>Unpermitted:</dt>
+    <dd id="unpermitted">Top Secret</dd>
+
+    <dt>Peek A Boo:</dt>
+    <dd id="peekaboo">BOO!</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 03:32:53 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:53 UTC +00:00]]
+  [1m[35m (14.9ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (2.2ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (18.7ms)
+
+Sent mail to to@example.com (24.4ms)
+Date: Sun, 13 Oct 2013 16:32:53 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <525a146577618_4866c613e439291@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/35</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/35</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/35</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/35</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/35</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/35</dd>
+
+    <dt>Permit to present:</dt>
+    <dd id="permit_to_present">I am permitted</dd>
+    <dt>Unpermitted:</dt>
+    <dd id="unpermitted">Top Secret</dd>
+
+    <dt>Peek A Boo:</dt>
+    <dd id="peekaboo">BOO!</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (5.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:32:53 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:53 UTC +00:00]]
+  [1m[36m (26.3ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (6.8ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (7.6ms)
+
+Sent mail to to@example.com (19.1ms)
+Date: Sun, 13 Oct 2013 16:32:53 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <525a14658e0de_4866c613e4393c3@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/36</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/36</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/36</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/36</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/36</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/36</dd>
+
+    <dt>Permit to present:</dt>
+    <dd id="permit_to_present">I am permitted</dd>
+    <dt>Unpermitted:</dt>
+    <dd id="unpermitted">Top Secret</dd>
+
+    <dt>Peek A Boo:</dt>
+    <dd id="peekaboo">BOO!</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)[0m  [["created_at", Sun, 13 Oct 2013 03:32:53 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:53 UTC +00:00]]
+  [1m[35m (35.8ms)[0m  commit transaction
+  Rendered posts/_post.html.erb (6.3ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (6.9ms)
+
+Sent mail to to@example.com (20.4ms)
+Date: Sun, 13 Oct 2013 16:32:53 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <525a1465c75cf_4866c613e439488@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/37</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/37</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/37</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/37</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/37</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/37</dd>
+
+    <dt>Permit to present:</dt>
+    <dd id="permit_to_present">I am permitted</dd>
+    <dt>Unpermitted:</dt>
+    <dd id="unpermitted">Top Secret</dd>
+
+    <dt>Peek A Boo:</dt>
+    <dd id="peekaboo">BOO!</dd>
+</dl>
+
+
+
+</body>
+</html>
+
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", Sun, 13 Oct 2013 03:32:53 UTC +00:00], ["updated_at", Sun, 13 Oct 2013 03:32:53 UTC +00:00]]
+  [1m[36m (22.5ms)[0m  [1mcommit transaction[0m
+  Rendered posts/_post.html.erb (2.0ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (7.1ms)
+
+Sent mail to to@example.com (29.5ms)
+Date: Sun, 13 Oct 2013 16:32:53 +1300
+From: from@example.com
+To: to@example.com
+Message-ID: <525a1465dbcfb_4866c613e439549@ronald-ubuntu.mail>
+Subject: A presented post
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dummy</title>
+</head>
+<body>
+
+<dl>
+  <dt>Environment:</dt>
+  <dd id="environment">test</dd>
+
+  <dt>StrongPresenter view context controller:</dt>
+  <dd id="controller">PostMailer</dd>
+
+  <dt>Posted:</dt>
+  <dd id="posted_date">Today</dd>
+
+  <dt>Built-in helpers:</dt>
+  <dd id="truncated">Once upon a...</dd>
+
+  <dt>Built-in private helpers:</dt>
+  <dd id="html_escaped">&lt;script&gt;danger&lt;/script&gt;</dd>
+
+  <dt>Helpers from app/helpers:</dt>
+  <dd id="hello_world">Hello, world!</dd>
+
+  <dt>Helpers from the controller:</dt>
+  <dd id="goodnight_moon">Goodnight, moon!</dd>
+
+  <dt>Path with presenter:</dt>
+  <dd id="path_with_presenter">/en/posts/38</dd>
+
+  <dt>Path with model:</dt>
+  <dd id="path_with_model">/en/posts/38</dd>
+
+  <dt>Path with id:</dt>
+  <dd id="path_with_id">/en/posts/38</dd>
+
+  <dt>URL with presenter:</dt>
+  <dd id="url_with_presenter">http://www.example.com:12345/en/posts/38</dd>
+
+  <dt>URL with model:</dt>
+  <dd id="url_with_model">http://www.example.com:12345/en/posts/38</dd>
+
+  <dt>URL with id:</dt>
+  <dd id="url_with_id">http://www.example.com:12345/en/posts/38</dd>
+
+    <dt>Permit to present:</dt>
+    <dd id="permit_to_present">I am permitted</dd>
+    <dt>Unpermitted:</dt>
+    <dd id="unpermitted">Top Secret</dd>
+
+    <dt>Peek A Boo:</dt>
+    <dd id="peekaboo">BOO!</dd>
+</dl>
+
+
+
+</body>
+</html>
+

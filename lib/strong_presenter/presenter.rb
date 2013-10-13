@@ -1,8 +1,12 @@
 module StrongPresenter
   class Presenter
+    include StrongPresenter::ViewHelpers
     include StrongPresenter::Permissible
-    include StrongPresenter::Labelable
     extend StrongPresenter::Delegation
+
+    include ActiveModel::Serialization
+    include ActiveModel::Serializers::JSON
+    include ActiveModel::Serializers::Xml
 
     # Constructs the presenter, taking 1 argument for the object being wrapped. For example:
     #
@@ -85,19 +89,55 @@ module StrongPresenter
       end
     end
 
+    # Same as presents, but for a single attribute. The differences are:
+    #   - the return value is not in an Array
+    #   - passes the value only (without attribute key as the 1st argument) to a block
+    def present field
+      presents field do |key, value|
+        yield value if block_given?
+      end.first
+    end
+
+    delegate :to_s
+
+    # In case object is nil
+    delegate :present?, :blank?
+
+    # ActiveModel compatibility
+    # @private
+    def to_model
+      self
+    end
+
+    # @return [Hash] the object's attributes, sliced to only include those
+    # implemented by the presenter.
+    def attributes
+      object.attributes.select {|attribute, _| respond_to?(attribute) }
+    end
+
+    # ActiveModel compatibility
+    delegate :to_param, :to_partial_path
+
+    # ActiveModel compatibility
+    singleton_class.delegate :model_name, to: :object_class
+
     protected
     def object
       @object
     end
 
-    private
-    # Access to view helpers
-    #
-    def h
-      @helper ||= StrongPresenter::HelperProxy.new
-    end
-
     class << self
+      def inferred_presenter(object)
+        name = object.class.name
+        raise NameError if name.nil?
+        begin
+          "#{name}Presenter".constantize
+        rescue NameError => error
+          raise if name && !error.missing_name?(name)
+          raise StrongPresenter::UninferrablePresenterError.new(self)
+        end
+      end
+
       protected
       def alias_object_to_object_class_name
         if object_class?
@@ -124,8 +164,8 @@ module StrongPresenter
         raise if name && !error.missing_name?(name)
         const_set "Collection", Class.new(StrongPresenter::CollectionPresenter)
         (class << self::Collection; self; end).instance_exec self do |presenter|
-          define_method(:inferred_presenter_class) { presenter }
-          private :inferred_presenter_class
+          define_method(:presenter_class) { presenter }
+          private :presenter_class
         end
       ensure
         return self::Collection

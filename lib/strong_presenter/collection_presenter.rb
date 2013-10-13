@@ -1,6 +1,7 @@
 module StrongPresenter
   class CollectionPresenter
     include Enumerable
+    include StrongPresenter::ViewHelpers
     include StrongPresenter::Permissible
     extend StrongPresenter::Delegation
 
@@ -22,14 +23,21 @@ module StrongPresenter
     protected
     # @return [Class] the presenter class used to present each item, as set by
     #   {#initialize}.
-    attr_reader :presenter_class
+    def presenter_class
+      @presenter_class = @presenter_class.nil? ? self.class.send(:presenter_class) : @presenter_class
+    end
+
+    def item_presenter(item)
+      return presenter_class if presenter_class
+      StrongPresenter::Presenter.inferred_presenter(item)
+    end
 
     # @return the collection being presented.
     attr_reader :object
 
     # Wraps the given item.
     def wrap_item(item)
-      item_presenter.new(item).tap do |presenter|
+      item_presenter(item).new(item).tap do |presenter|
         presenter.send :permitted_attributes=, permitted_attributes # item's permitted_attributes is linked to collection
       end
     end
@@ -37,11 +45,6 @@ module StrongPresenter
     # @return [Array] the items being presented
     def collection
       @collection ||= object.map{|item| wrap_item(item)}
-    end
-
-    private
-    def item_presenter
-      presenter_class || self.inferred_presenter_class
     end
 
     class << self
@@ -59,8 +62,15 @@ module StrongPresenter
         name.constantize
       rescue NameError => error
         raise if name && !error.missing_name?(name)
-        raise StrongPresenter::UninferrableSourceError.new(self)
+        raise StrongPresenter::UninferrablePresenterError.new(self)
       end
+
+      def presenter_class # possibly allow this to be set
+        @presenter_class ||= inferred_presenter_class
+      rescue StrongPresenter::UninferrablePresenterError
+        false
+      end
+
     end
   end
 end

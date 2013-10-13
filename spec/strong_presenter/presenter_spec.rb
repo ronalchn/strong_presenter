@@ -32,7 +32,7 @@ module StrongPresenter
 
       it "sets inferred presenter on default collection presenter" do
         expect{OtherPresenter::Collection.inferred_presenter_class}.to raise_error NoMethodError
-        expect(OtherPresenter::Collection.send :inferred_presenter_class).to be OtherPresenter
+        expect(OtherPresenter::Collection.send :presenter_class).to be OtherPresenter
       end
 
       it "inferrs presenter on collection presenter" do

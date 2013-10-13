@@ -25,20 +25,9 @@ module StrongPresenter
     end
 
     # Checks which fields are visible according to what is permitted. An array is returned.
-    # The array can be converted to labels using `to_labels`
     #
     def filter *fields
-      fields = select_permitted(fields).map(&:first)
-
-      presenter_class = self.class
-      presenter_class = self.presenter_class if self.is_a? StrongPresenter::CollectionPresenter
-
-      (class << fields; self; end).class_eval do
-        define_method :to_labels do
-          presenter_class.label fields
-        end
-      end
-      fields
+      select_permitted(fields).map(&:first)
     end
 
     protected

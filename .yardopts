@@ -1,0 +1,1 @@
+yardoc 'lib/strong_presenter/**/*.rb' -m markdown --no-private

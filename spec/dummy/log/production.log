@@ -1,0 +1,30 @@
+Started GET "/posts/1" for 127.0.0.1 at 2013-10-13 14:29:08 +1300
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"1"}
+  Rendered posts/_post.html.erb (15.9ms)
+  Rendered posts/show.html.erb within layouts/application (20.3ms)
+Completed 200 OK in 71ms (Views: 30.4ms | ActiveRecord: 2.5ms)
+Started GET "/posts/1/mail" for 127.0.0.1 at 2013-10-13 14:29:08 +1300
+Processing by PostsController#mail as */*
+  Parameters: {"id"=>"1"}
+  Rendered posts/_post.html.erb (2.8ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (4.5ms)
+
+Sent mail to to@example.com (200.3ms)
+  Rendered text template (0.1ms)
+Completed 200 OK in 288ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+Started GET "/posts/1" for 127.0.0.1 at 2013-10-13 16:30:21 +1300
+Processing by PostsController#show as */*
+  Parameters: {"id"=>"1"}
+  Rendered posts/_post.html.erb (51.5ms)
+  Rendered posts/show.html.erb within layouts/application (61.4ms)
+Completed 200 OK in 139ms (Views: 111.3ms | ActiveRecord: 1.3ms)
+Started GET "/posts/1/mail" for 127.0.0.1 at 2013-10-13 16:30:21 +1300
+Processing by PostsController#mail as */*
+  Parameters: {"id"=>"1"}
+  Rendered posts/_post.html.erb (8.7ms)
+  Rendered post_mailer/presented_email.html.erb within layouts/application (10.5ms)
+
+Sent mail to to@example.com (149.2ms)
+  Rendered text template (0.0ms)
+Completed 200 OK in 375ms (Views: 5.9ms | ActiveRecord: 0.2ms)
