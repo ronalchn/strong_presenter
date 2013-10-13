@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gemspec
 
+gem 'debugger', platforms: [:mri_19, :mri_20]
 gem 'coveralls', require: false, platforms: [:mri_19, :mri_20]
 
 platforms :ruby do

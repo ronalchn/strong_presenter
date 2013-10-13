@@ -146,29 +146,23 @@ module StrongPresenter
         end
       end
 
+      def set_presenter_collection
+        const_set "Collection", collection_presenter
+      end
+
       private
       def inherited(subclass)
         subclass.alias_object_to_object_class_name
+        subclass.set_presenter_collection
         super
       end
 
-      def const_missing const
-        return set_collection_presenter if const == :Collection
-        super
-      end
-
-      def set_collection_presenter
+      def collection_presenter
         name = collection_presenter_name
-        const_set "Collection", name.constantize
+        name.constantize
       rescue NameError => error
         raise if name && !error.missing_name?(name)
-        const_set "Collection", Class.new(StrongPresenter::CollectionPresenter)
-        (class << self::Collection; self; end).instance_exec self do |presenter|
-          define_method(:presenter_class) { presenter }
-          private :presenter_class
-        end
-      ensure
-        return self::Collection
+        Class.new(StrongPresenter::CollectionPresenter).presents_with(self)
       end
 
       def object_class_name

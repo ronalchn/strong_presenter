@@ -48,7 +48,31 @@ module StrongPresenter
     end
 
     class << self
+      # Sets the presenter used to wrap models in the collection
+      def presents_with presenter
+        @presenter_class = presenter
+        self
+      end
+
+      protected
+      def set_item_presenter_collection
+        name = presenter_class_name # singular Presenter name
+        if const_defined? name # exists?
+          presenter = name.constantize
+          if presenter::Collection.name.demodulize == "Collection"
+            presenter.send :remove_const, :Collection
+            presenter.send :const_set, "Collection", self
+          end
+        end
+      rescue NameError => error
+      end
+
       private
+      def inherited(subclass)
+        subclass.set_item_presenter_collection
+        super
+      end
+
       def presenter_class_name
         raise NameError if name.nil? || name.demodulize !~ /.+Presenter$/
         plural = name.chomp("Presenter")
@@ -65,7 +89,7 @@ module StrongPresenter
         raise StrongPresenter::UninferrablePresenterError.new(self)
       end
 
-      def presenter_class # possibly allow this to be set
+      def presenter_class
         @presenter_class ||= inferred_presenter_class
       rescue StrongPresenter::UninferrablePresenterError
         false
