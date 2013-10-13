@@ -148,7 +148,7 @@ However, sometimes you will want to display information only if it is permitted.
 
 ```erb
 <% fields = { :username => "Username", :name => "Name", :email => "E-mail" } %>
-<% @user_presenter.presents *fields.keys do |key, value| %>
+<% user.presents *fields.keys do |key, value| # user = @user_presenter because of the call to `presents` in the controller class %>
   <b><%= fields[key] %>:</b> <%= value %><br>
 <% end %>
 ```
@@ -156,8 +156,8 @@ However, sometimes you will want to display information only if it is permitted.
 The `present` method is also available to display a single attribute:
 
 ```erb
-<b>Hello <%= @user_presenter.present :name %></b><br>
-<% @user_presenter.present :username do |value| %>
+<b>Hello <%= user.present :name %></b><br>
+<% user.present :username do |value| %>
   <b>Username:</b> <%= value %><br>
 <% end %>
 ```
@@ -195,13 +195,13 @@ There is also a `filter` method to help you with tables:
 <% fields = { :username => "Username", :name => "Name", :email => "E-mail" } %>
 <table>
   <tr>
-    <% @users_presenter.filter( *fields.keys ) do |key| %>
+    <% user.filter( *fields.keys ) do |key| %>
       <th><%= fields[key] %></th>
     <% end %>
   </tr>
   <% @users_presenter.each do |user_presenter| %>
     <tr>
-      <% user_presenter.presents( *fields.keys ).each do |value| %>
+      <% user.presents( *fields.keys ).each do |value| %>
         <%= content_tag :td, value %>
       <% end %>
     </tr>
@@ -215,7 +215,7 @@ array of only the visible columns, and we use our `fields` hash to label it.
 We can decide what attributes to present based on a GET parameter input, for example:
 
 ```erb
-<% user_presenter.presents( params[:columns].split(',') ).each do |value| %><%= content_tag :td, value %><% end %>
+<% user.presents( params[:columns].split(',') ).each do |value| %><%= content_tag :td, value %><% end %>
 ```
 
 Because of the `permit` checks, there is no danger that private information will be revealed.
