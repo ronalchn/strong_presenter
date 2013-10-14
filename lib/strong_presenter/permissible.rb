@@ -34,11 +34,12 @@ module StrongPresenter
     # Selects the attributes given which have been permitted - an array of attributes. Attributes are
     # symbols, and attribute paths are arrays of symbols.
     #
-    # @params [[Symbols*]*] attributes
-    #   the attributes to check. An array of symbols represents an attribute path.
+    # @params [[Symbols*]*] attribute_paths
+    #   the attribute paths to check. The attribute paths may also have arguments, but the array
+    #   is truncated at the element where there is no #to_sym method
     # @return [[Symbols*]*] attribute (paths)
-    def filter *attributes
-      select_permitted(*attributes).map{ |attribute| attribute.first if attribute.size == 1 } # un-pack symbol if array with single symbol
+    def filter *attribute_paths
+      select_permitted(*attribute_paths).map{ |attribute| attribute.first if attribute.size == 1 } # un-pack symbol if array with single symbol
     end
 
     protected

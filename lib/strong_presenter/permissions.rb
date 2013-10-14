@@ -71,6 +71,7 @@ module StrongPresenter
       prefix_path = symbolize_array(prefix_path)
       # don't permit if already permitted
       raw_reject_permitted(prefix_path, symbolize_arrays(attribute_paths)).each do |attribute_path|
+        attribute_path.each{|el|el.to_sym} # assert all are Symbols
         permitted_paths << prefix_path + attribute_path
       end
       self
@@ -117,6 +118,7 @@ module StrongPresenter
     # Caution: Will mutate prefix_path
     def permitted_partial? prefix_path, attribute_path
       !!Array(attribute_path).detect do |attr|
+        break unless attr.is_a? Symbol
         prefix_path << attr
         permitted_paths.include? prefix_path
       end
@@ -124,7 +126,7 @@ module StrongPresenter
 
     # Convert to array of symbols, also dups it
     def symbolize_array array
-      Array(array).map{|e|e.to_sym}
+      Array(array).map{|e| e.respond_to?(:to_sym) ? e.to_sym : e }
     end
 
     def symbolize_arrays arrays

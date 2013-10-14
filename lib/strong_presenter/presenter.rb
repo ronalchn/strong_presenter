@@ -82,8 +82,9 @@ module StrongPresenter
     #   </table>
     #
     def presents *attributes
-      select_permitted(attributes).map do |args|
+      select_permitted(*attributes).map do |args|
         # TODO: drill down while args[0] is association (when associations feature added)
+        # TODO: wrap args to prevent symbolization unless already symbols
         value = self.public_send *args
         yield args[0], value if block_given?
         value
