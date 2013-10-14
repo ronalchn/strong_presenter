@@ -3,31 +3,42 @@ module StrongPresenter
     extend ActiveSupport::Concern
 
     module ClassMethods
-      # Permits all fields in the presenter for mass presentation
-      #
+      # Permits all presenter attributes for presents, present & filter methods.
       def permit!
-        define_method(:permitted_attributes){ StrongPresenter::Permissions.all }
+        define_method(:permitted_attributes){ @permitted_attributes ||= StrongPresenter::Permissions.new.permit_all! }
       end
     end
 
-    # Sets fields which will be permitted. May be invoked multiple times.
+    # Permits given attributes. May be invoked multiple times.
     #
-    def permit *fields
-      self.permitted_attributes.merge fields if !permitted_attributes.complete?
+    # @example Each argument represents a single attribute:
+    #   ArticlePresenter.new(@article).permit(:heading, :article)
+    #
+    # @example Attribute paths can be specified using symbol arrays. If an author name is normally accessed using @article.author.name:
+    #   ArticlePresenter.new(@article).permit([:author, :name])
+    #
+    # @params [[Symbols*]*] attribute_paths
+    #   the attributes to permit. An array of symbols represents an attribute path.
+    # @return [self]
+    def permit *attribute_paths
+      permitted_attributes.permit permissions_prefix, *attribute_paths
       self
     end
 
-    # Permits all fields
-    #
+    # Permits all presenter attributes for presents, present & filter methods.
     def permit!
       permitted_attributes.permit_all!
       self
     end
 
-    # Checks which fields are visible according to what is permitted. An array is returned.
+    # Selects the attributes given which have been permitted - an array of attributes. Attributes are
+    # symbols, and attribute paths are arrays of symbols.
     #
-    def filter *fields
-      select_permitted(fields).map(&:first)
+    # @params [[Symbols*]*] attributes
+    #   the attributes to check. An array of symbols represents an attribute path.
+    # @return [[Symbols*]*] attribute (paths)
+    def filter *attributes
+      select_permitted(*attributes).map{ |attribute| attribute.first if attribute.size == 1 } # un-pack symbol if array with single symbol
     end
 
     protected
@@ -35,21 +46,19 @@ module StrongPresenter
       @permitted_attributes ||= StrongPresenter::Permissions.new
     end
 
-    def select_permitted fields
-      fields.map! do |field|
-        field = Array(field)
-        field[0] = field[0].to_sym
-        field
-      end
-      fields.select! { |field| permitted_attributes.include? field[0] } if !permitted_attributes.complete?
-      fields
+    def select_permitted *attribute_paths
+      permitted_attributes.select_permitted permissions_prefix, *attribute_paths
     end
 
     private
     def permitted_attributes= permitted_attributes
-      permitted_attributes.permit_all! if permitted_attributes.complete?
-      @permitted_attributes = permitted_attributes
+      @permitted_attributes = permitted_attributes.merge @permitted_attributes
     end
 
+    attr_writer :permissions_prefix
+    def permissions_prefix
+      @permissions_prefix ||= []
+    end
   end
 end
+
