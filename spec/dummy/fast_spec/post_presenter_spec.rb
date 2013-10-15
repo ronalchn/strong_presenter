@@ -1,5 +1,4 @@
-require 'strong_presenter'
-require 'rspec'
+require 'fast_spec_helper'
 
 require 'active_model/naming'
 require_relative '../app/presenters/post_presenter'
