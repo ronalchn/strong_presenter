@@ -13,7 +13,7 @@ A number of features have been copied from Draper and refined.
 
 Presenters wrap your models, to deal with presentation, so your models can concentrate on domain logic. Instead of using a helper method to display some information in a view, you can implement the method in a presenter instead.
 
-Others have used decorators, which are very similar, for this purpose. While decorators can also be used for presentation logic, it may cause some confusion in your application. Presenters are designed to help you to present - a market-led solution where unneccessary features can be discarded. Decorators are a coding pattern which can be forged to help you present - a product-led solution.
+Others have used decorators, which are very similar, for this purpose. While decorators can also be used for presentation logic, it may cause some confusion in your application. Presenters are designed to help you to present - a market-oriented solution where unneccessary features can be discarded. Decorators are a coding pattern which can be forged to help you present - a product-oriented solution.
 
 The decorator coding pattern involves using delegation to wrap the model, adding new behaviour to the base object. It may involve overriding some methods to present the data in a visually appealing way. The decorator pattern will generally wrap a object, but also keep the decorator acting like an instance of the base object - but this is not really what you want for presentation. It is also supposed to allow you to decorate a decorated object multiple times - to keep adding new behaviour to the object.
 
@@ -36,6 +36,8 @@ And then execute:
 Or install it yourself as:
 
     $ gem install strong_presenter
+
+This installs 0.0.1, which has a slightly different API. Version 0.1.0 is under development. While basic features have specs, newer features are not completely tested, so may not be stable for complex use-cases. Use `gem 'strong_presenter', :github => 'ronalchn/strong_presenter'` to install the development version.
 
 ## Usage
 
