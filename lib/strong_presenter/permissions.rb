@@ -9,6 +9,10 @@ module StrongPresenter
   #   
   #     When a presenter checks for permissions, the attribute path relative to the top
   #     presenter is prepended to each attribute path, and its existence checked in the Set.
+  #
+  #     Arguments can also be part of permissions control. They are simply additional elements in the attribute path array,
+  #     and need not be symbols. If they are symbols, there is no way for Permissions to know whether they
+  #     are part of the attribute path, or additional arguments. Only the presenter knows that.
   class Permissions
 
     # Checks whether everything is permitted.
@@ -33,21 +37,21 @@ module StrongPresenter
     # any array prefix has been permitted.
     #
     # @param [Symbol, Array<Symbol>] prefix_path
-    # @param [Symbol, Array<Symbol>] attribute_path
+    # @param [Symbol, Array<Symbol,Object>] attribute_path
     # @return [Boolean]
     def permitted? prefix_path, attribute_path = nil
-      raw_permitted? symbolize_array(prefix_path), symbolize_array(attribute_path)
+      raw_permitted? Array(prefix_path), Array(attribute_path)
     end
 
     # Selects the attribute paths which are permitted.
     #
     # @param [Array] prefix_path
     #   namespace in which each of the given attribute paths are in
-    # @param [[Symbol*]*] *attribute_paths
+    # @param [[Symbol, Array<Symbol,Object>]*] *attribute_paths
     #   each attribute path is a symbol or array of symbols
-    # @return [[Symbol*]*] array of attribute paths permitted
+    # @return [Array<Symbol, Array<Symbol,Object>>] array of attribute paths permitted
     def select_permitted prefix_path, *attribute_paths
-      raw_select_permitted symbolize_array(prefix_path), symbolize_arrays(attribute_paths)
+      raw_select_permitted Array(prefix_path), nested_array(attribute_paths)
     end
 
     # Rejects the attribute paths which are permitted. Opposite of select_permitted.
@@ -55,23 +59,22 @@ module StrongPresenter
     #
     # @param [Array] prefix_path
     #   namespace in which each of the given attribute paths are in
-    # @param [[Symbol*]*] *attribute_paths
+    # @param [[Symbol, Array<Symbol,Object>]*] *attribute_paths
     #   each attribute path is a symbol or array of symbols
-    # @return [[Symbol*]*] array of attribute paths remaining
+    # @return [Array<Symbol, Array<Symbol,Object>>] array of attribute paths remaining
     def reject_permitted prefix_path, *attribute_paths
-      raw_reject_permitted symbolize_array(prefix_path), symbolize_arrays(attribute_paths)
+      raw_reject_permitted Array(prefix_path), nested_array(attribute_paths)
     end
 
     # Permits some attribute paths
     #
     # @param [Array<Symbol>] prefix_path
     #   path to prepend to each attribute path
-    # @param [[Symbol*]*] *attribute_paths
+    # @param [[Symbol, Array<Symbol,Object>]*] *attribute_paths
     def permit prefix_path, *attribute_paths
-      prefix_path = symbolize_array(prefix_path)
+      prefix_path = Array(prefix_path)
       # don't permit if already permitted
-      raw_reject_permitted(prefix_path, symbolize_arrays(attribute_paths)).each do |attribute_path|
-        attribute_path.each{|el|el.to_sym} # assert all are Symbols
+      raw_reject_permitted(prefix_path, nested_array(attribute_paths)).each do |attribute_path|
         permitted_paths << prefix_path + attribute_path
       end
       self
@@ -93,20 +96,20 @@ module StrongPresenter
     end
 
     private
-    # We trust parameters are symbolize_array(paths)
-    def raw_permitted? prefix_path, attribute_path = nil
+    # We trust path parameters are arrays
+    def raw_permitted? prefix_path, attribute_path = nil # const - does not alter arguments
       return true if complete?
       permitted_partial?([], prefix_path + Array(attribute_path))
     end
 
-    def raw_reject_permitted prefix_path, attribute_paths
+    def raw_reject_permitted prefix_path, attribute_paths # const - does not alter arguments
       return [] if raw_permitted? prefix_path
       attribute_paths.reject do |attribute_path|
         permitted_partial? prefix_path.dup, attribute_path
       end
     end
 
-    def raw_select_permitted prefix_path, attribute_paths
+    def raw_select_permitted prefix_path, attribute_paths # const - does not alter arguments
       return attribute_paths if raw_permitted? prefix_path
       attribute_paths.select do |attribute_path|
         permitted_partial? prefix_path.dup, attribute_path
@@ -124,14 +127,10 @@ module StrongPresenter
       end
     end
 
-    # Convert to array of symbols, also dups it
-    def symbolize_array array
-      Array(array).map{|e| e.respond_to?(:to_sym) ? e.to_sym : e }
+    # Ensures that every array element is an array
+    def nested_array array
+      array.map{|e|Array(e)}
     end
 
-    def symbolize_arrays arrays
-      arrays.map{|a|symbolize_array a}
-    end
   end
-
 end

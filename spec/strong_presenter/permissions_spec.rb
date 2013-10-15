@@ -32,6 +32,15 @@ module StrongPresenter
         expect(permissions.permitted?([:prefix, :array], :attr2)).to be true
         expect(permissions.permitted?([:prefix, :array], [:attr, :array])).to be true
       end
+
+      it 'does not mutate arguments' do
+        prefix = [:pre, :fix]
+        attrpaths = [[:attr, :path], :s]
+        Permissions.new.permit(prefixarg = prefix.dup, attrpathsarg = attrpaths.dup)
+
+        expect(prefixarg).to eq prefix
+        expect(attrpathsarg).to eq attrpaths
+      end
     end
 
     describe "#permitted?" do
@@ -62,6 +71,20 @@ module StrongPresenter
 
         it 'does not permit shortened paths' do
           expect(@permissions.permitted?([:prefix, :array], :attr)).to be false
+        end
+
+        it 'does not mutate arguments' do
+          prefix = [:pre, :fix]
+          attrpaths = [[:attr, :path], :s, [:array, :attr2]]
+
+          @permissions.permitted?(prefixarg = prefix.dup, attrpathsarg = attrpaths.dup)
+          expect(prefixarg).to eq prefix
+          expect(attrpathsarg).to eq attrpaths
+
+          prefix = [:prefix]
+          @permissions.permitted?(prefixarg = prefix.dup, attrpathsarg = attrpaths.dup)
+          expect(prefixarg).to eq prefix
+          expect(attrpathsarg).to eq attrpaths
         end
       end
 
@@ -106,6 +129,20 @@ module StrongPresenter
           attribute_paths = (unpermitted_paths + permitted_paths).shuffle
           expect(@permissions.select_permitted([:prefix, :array], *attribute_paths)).to eq((attribute_paths & permitted_paths).map{|a|Array(a)})
         end
+
+        it 'does not mutate arguments' do
+          prefix = [:pre, :fix]
+          attrpaths = [[:attr, :path], :s, [:array, :attr2]]
+
+          @permissions.select_permitted(prefixarg = prefix.dup, attrpathsarg = attrpaths.dup)
+          expect(prefixarg).to eq prefix
+          expect(attrpathsarg).to eq attrpaths
+
+          prefix = [:prefix]
+          @permissions.select_permitted(prefixarg = prefix.dup, attrpathsarg = attrpaths.dup)
+          expect(prefixarg).to eq prefix
+          expect(attrpathsarg).to eq attrpaths
+        end
       end
 
       context 'with permit all' do
@@ -129,6 +166,20 @@ module StrongPresenter
           unpermitted_paths = [:attr4, :attr5, [:attrk, :irrelevant], [:attr, :ar]]
           attribute_paths = (unpermitted_paths + permitted_paths).shuffle
           expect(@permissions.reject_permitted([:prefix, :array], *attribute_paths)).to eq((attribute_paths & unpermitted_paths).map{|a|Array(a)})
+        end
+
+        it 'does not mutate arguments' do
+          prefix = [:pre, :fix]
+          attrpaths = [[:attr, :path], :s, [:array, :attr2]]
+
+          @permissions.reject_permitted(prefixarg = prefix.dup, attrpathsarg = attrpaths.dup)
+          expect(prefixarg).to eq prefix
+          expect(attrpathsarg).to eq attrpaths
+
+          prefix = [:prefix]
+          @permissions.reject_permitted(prefixarg = prefix.dup, attrpathsarg = attrpaths.dup)
+          expect(prefixarg).to eq prefix
+          expect(attrpathsarg).to eq attrpaths
         end
       end
     end

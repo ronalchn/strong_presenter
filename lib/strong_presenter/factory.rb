@@ -30,7 +30,7 @@ module StrongPresenter
       def initialize(presenter_class, object)
         @presenter_class = presenter_class
         @object = object
-        @presenter_class = presenter_class::Collection if collection? && !(presenter_class < StrongPresenter::CollectionPresenter)
+        @presenter_class = presenter_class::Collection if collection? && !presenter_class.nil? && (presenter_class < StrongPresenter::Presenter)
       end
 
       def call

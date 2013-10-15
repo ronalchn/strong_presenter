@@ -38,7 +38,7 @@ module StrongPresenter
     # Wraps the given item.
     def wrap_item(item)
       item_presenter(item).new(item).tap do |presenter|
-        presenter.send :permitted_attributes=, permitted_attributes # item's permitted_attributes is linked to collection
+        presenter.send :link_permitted_attributes, permitted_attributes # item's permitted_attributes is linked to collection
       end
     end
 

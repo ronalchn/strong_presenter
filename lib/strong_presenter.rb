@@ -21,6 +21,7 @@ require "strong_presenter/permissible"
 require "strong_presenter/presenter"
 require "strong_presenter/collection_presenter"
 require "strong_presenter/factory"
+require "strong_presenter/presenter_association"
 require "strong_presenter/presenter_helper_constructor"
 require "strong_presenter/controller_additions"
 require "strong_presenter/railtie" if defined? Rails

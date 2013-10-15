@@ -35,8 +35,7 @@ module StrongPresenter
     # symbols, and attribute paths are arrays of symbols.
     #
     # @params [[Symbols*]*] attribute_paths
-    #   the attribute paths to check. The attribute paths may also have arguments, but the array
-    #   is truncated at the element where there is no #to_sym method
+    #   the attribute paths to check. The attribute paths may also have arguments.
     # @return [[Symbols*]*] attribute (paths)
     def filter *attribute_paths
       select_permitted(*attribute_paths).map{ |attribute| attribute.first if attribute.size == 1 } # un-pack symbol if array with single symbol
@@ -52,8 +51,9 @@ module StrongPresenter
     end
 
     private
-    def permitted_attributes= permitted_attributes
+    def link_permitted_attributes permitted_attributes, path = []
       @permitted_attributes = permitted_attributes.merge @permitted_attributes
+      self.permissions_prefix = path
     end
 
     attr_writer :permissions_prefix
