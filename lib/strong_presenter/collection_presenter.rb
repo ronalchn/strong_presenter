@@ -85,7 +85,7 @@ module StrongPresenter
         name = presenter_class_name
         name.constantize
       rescue NameError => error
-        raise if name && !error.missing_name?(name)
+        raise if name && error.missing_name.demodulize != name.demodulize
         raise StrongPresenter::UninferrablePresenterError.new(self)
       end
 

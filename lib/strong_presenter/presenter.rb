@@ -190,7 +190,7 @@ module StrongPresenter
         begin
           "#{name}Presenter".constantize
         rescue NameError => error
-          raise if name && !error.missing_name?(name)
+          raise if name && error.missing_name.demodulize != name.demodulize
           raise StrongPresenter::UninferrablePresenterError.new(self)
         end
       end
@@ -218,7 +218,7 @@ module StrongPresenter
         name = collection_presenter_name
         name.constantize
       rescue NameError => error
-        raise if name && !error.missing_name?(name)
+        raise if name && error.missing_name.demodulize != name.demodulize
         Class.new(StrongPresenter::CollectionPresenter).presents_with(self)
       end
 
@@ -231,7 +231,7 @@ module StrongPresenter
         name = object_class_name
         name.constantize
       rescue NameError => error
-        raise if name && !error.missing_name?(name)
+        raise if name && error.missing_name.demodulize != name.demodulize
         raise StrongPresenter::UninferrableSourceError.new(self)
       end
 
