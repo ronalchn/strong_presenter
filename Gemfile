@@ -4,7 +4,11 @@ gemspec
 
 gem 'debugger', platforms: :mri_19
 gem 'byebug', platforms: :mri_20
-gem 'coveralls', require: false, platforms: [:mri_19, :mri_20]
+
+platforms :mri_19, :mri_20 do
+  gem 'simplecov', require: false
+  gem 'coveralls', require: false
+end
 
 platforms :ruby do
   gem "sqlite3"

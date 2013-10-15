@@ -1,9 +1,10 @@
 begin
-  require 'coveralls'
-  Coveralls.wear_merged!
+  require 'simplecov'
+  SimpleCov.start do
+    add_filter 'spec'
+  end
 rescue LoadError
 end
-
 
 require 'bundler/setup'
 require 'strong_presenter'
