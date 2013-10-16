@@ -158,7 +158,7 @@ module StrongPresenter
       end
 
       def collection_presenter
-        collection_presenter = Inferrer.new(name, "Presenter").inferred_class {|name| "#{name.pluralize}Presenter"}
+        collection_presenter = Inferrer.new(name).chomp("Presenter").inferred_class {|name| "#{name.pluralize}Presenter"}
         return collection_presenter unless collection_presenter.nil? || collection_presenter == self
         Class.new(StrongPresenter::CollectionPresenter).presents_with(self)
       end
@@ -169,12 +169,12 @@ module StrongPresenter
       #
       # @return [Class] the source class that corresponds to this presenter.
       def object_class
-        @object_class ||= Inferrer.new(name, "Presenter").inferred_class or raise UninferrableSourceError.new(self)
+        @object_class ||= Inferrer.new(name).chomp("Presenter").inferred_class or raise UninferrableSourceError.new(self)
       end
 
       # Checks whether this presenter class has a corresponding {object_class}.
       def object_class?
-        !!(@object_class ||= Inferrer.new(name, "Presenter").inferred_class)
+        !!(@object_class ||= Inferrer.new(name).chomp("Presenter").inferred_class)
       rescue NameError
         false
       end

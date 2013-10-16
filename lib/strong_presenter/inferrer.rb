@@ -7,11 +7,17 @@ module StrongPresenter
     # Constructs inferer object
     # @param [String] input
     #   Input name as base to infer from
-    # @param [String] suffix
-    #   Suffix which must be present in input to remove
-    def initialize(input, suffix = "")
+    def initialize(input)
       self.input = input
+    end
+
+    # Sets input suffix
+    # @param [String] suffix
+    #   Suffix which must be present in input to chomp/remove
+    # @return [self] chainable
+    def chomp(suffix)
       self.suffix = suffix
+      self
     end
 
     # Extracts name by removing suffix
@@ -41,7 +47,7 @@ module StrongPresenter
       return true if error.is_a? UnextractableError
       missing_name = error.missing_name
       length = [missing_name.length, name.length].min
-      missing_name[-length..0] == name[-length..0]
+      missing_name[-length..-1] == name[-length..-1]
     end
     class UnextractableError < NameError; end
   end

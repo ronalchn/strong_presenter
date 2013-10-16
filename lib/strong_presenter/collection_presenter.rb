@@ -75,7 +75,7 @@ module StrongPresenter
       end
 
       def inferred_presenter_class
-        presenter_class = Inferrer.new(name, "Presenter").inferred_class { |name| "#{name.singularize}Presenter" }
+        presenter_class = Inferrer.new(name).chomp("Presenter").inferred_class { |name| "#{name.singularize}Presenter" }
         presenter_class == self ? nil : presenter_class
       end
 
