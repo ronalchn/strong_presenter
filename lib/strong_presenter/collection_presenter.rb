@@ -56,10 +56,11 @@ module StrongPresenter
 
       protected
       def set_item_presenter_collection
-        name = presenter_class_name # singular Presenter name
-        if const_defined? name # exists?
-          presenter = name.constantize
-          if presenter::Collection.name.demodulize == "Collection"
+        presenter = presenter_class
+        unless presenter.nil? # exists?
+          if !presenter.send(:const_defined?, "Collection")
+            presenter.send :const_set, "Collection", self
+          elsif presenter::Collection.name.demodulize == "Collection"
             presenter.send :remove_const, :Collection
             presenter.send :const_set, "Collection", self
           end
@@ -73,26 +74,13 @@ module StrongPresenter
         super
       end
 
-      def presenter_class_name
-        raise NameError if name.nil? || name.demodulize !~ /.+Presenter$/
-        plural = name.chomp("Presenter")
-        singular = plural.singularize
-        raise NameError if plural == singular
-        "#{singular}Presenter"
-      end
-
       def inferred_presenter_class
-        name = presenter_class_name
-        name.constantize
-      rescue NameError => error
-        raise if name && error.missing_name.demodulize != name.demodulize
-        raise StrongPresenter::UninferrablePresenterError.new(self)
+        presenter_class = Inferrer.new(name, "Presenter").inferred_class { |name| "#{name.singularize}Presenter" }
+        presenter_class == self ? nil : presenter_class
       end
 
       def presenter_class
         @presenter_class ||= inferred_presenter_class
-      rescue StrongPresenter::UninferrablePresenterError
-        false
       end
 
     end

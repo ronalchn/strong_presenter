@@ -135,14 +135,7 @@ module StrongPresenter
 
     class << self
       def inferred_presenter(object)
-        name = object.class.name
-        raise NameError if name.nil?
-        begin
-          "#{name}Presenter".constantize
-        rescue NameError => error
-          raise if name && error.missing_name.demodulize != name.demodulize
-          raise StrongPresenter::UninferrablePresenterError.new(self)
-        end
+        Inferrer.new(object.class.name).inferred_class { |name| "#{name}Presenter" } or raise StrongPresenter::UninferrablePresenterError.new(self)
       end
 
       protected
@@ -165,30 +158,9 @@ module StrongPresenter
       end
 
       def collection_presenter
-        name = collection_presenter_name
-        name.constantize
-      rescue NameError => error
-        raise if name && error.missing_name.demodulize != name.demodulize
+        collection_presenter = Inferrer.new(name, "Presenter").inferred_class {|name| "#{name.pluralize}Presenter"}
+        return collection_presenter unless collection_presenter.nil? || collection_presenter == self
         Class.new(StrongPresenter::CollectionPresenter).presents_with(self)
-      end
-
-      def object_class_name
-        raise NameError if name.nil? || name.demodulize !~ /.+Presenter$/
-        name.chomp("Presenter")
-      end
-
-      def inferred_object_class
-        name = object_class_name
-        name.constantize
-      rescue NameError => error
-        raise if name && error.missing_name.demodulize != name.demodulize
-        raise StrongPresenter::UninferrableSourceError.new(self)
-      end
-
-      def collection_presenter_name
-        plural = object_class_name.pluralize
-        raise NameError if plural == object_class_name
-        "#{plural}Presenter"
       end
 
       # Returns the source class corresponding to the presenter class, as set by
@@ -197,13 +169,13 @@ module StrongPresenter
       #
       # @return [Class] the source class that corresponds to this presenter.
       def object_class
-        @object_class ||= inferred_object_class
+        @object_class ||= Inferrer.new(name, "Presenter").inferred_class or raise UninferrableSourceError.new(self)
       end
 
       # Checks whether this presenter class has a corresponding {object_class}.
       def object_class?
-        object_class
-      rescue StrongPresenter::UninferrableSourceError
+        !!(@object_class ||= Inferrer.new(name, "Presenter").inferred_class)
+      rescue NameError
         false
       end
 

@@ -1,4 +1,6 @@
 module StrongPresenter
+
+  # Methods for defining presenter associations
   module Associable
     extend ActiveSupport::Concern
 
