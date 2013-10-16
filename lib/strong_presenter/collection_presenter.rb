@@ -3,7 +3,7 @@ module StrongPresenter
     include Enumerable
     include StrongPresenter::ViewHelpers
     include StrongPresenter::Permissible
-    extend StrongPresenter::Delegation
+    include StrongPresenter::Delegation
 
     array_methods = Array.instance_methods - Object.instance_methods
     delegate :==, :as_json, *array_methods, to: :collection
