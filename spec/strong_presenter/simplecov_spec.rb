@@ -1,4 +1,4 @@
 require 'spec_helper'
 
-SimpleCov.command_name 'spec:strong_presenter'
+SimpleCov.command_name 'spec:strong_presenter' if defined? SimpleCov
 
