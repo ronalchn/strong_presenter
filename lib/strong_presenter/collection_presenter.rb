@@ -56,13 +56,15 @@ module StrongPresenter
 
       protected
       def set_item_presenter_collection
-        presenter = presenter_class
-        unless presenter.nil? # exists?
-          if !presenter.send(:const_defined?, "Collection")
-            presenter.send :const_set, "Collection", self
-          elsif presenter::Collection.name.demodulize == "Collection"
-            presenter.send :remove_const, :Collection
-            presenter.send :const_set, "Collection", self
+        collection = self
+        presenter_class.instance_exec do
+          unless nil?
+            if !const_defined? :Collection
+              const_set :Collection, collection
+            elsif self::Collection.name.demodulize == "Collection"
+              remove_const :Collection
+              const_set :Collection, collection
+            end
           end
         end
       rescue NameError => error

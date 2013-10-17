@@ -47,6 +47,12 @@ module StrongPresenter
     end
   end
 
+  def self.setup_active_model_serializers(base)
+    StrongPresenter::CollectionPresenter.class_eval do
+      include ActiveModel::ArraySerializerSupport
+    end
+  end
+
   # Note: we do not want to patch ActiveRecord
 
   class UninferrablePresenterError < NameError

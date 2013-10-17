@@ -11,21 +11,11 @@ module StrongPresenter
       end
     end
 
-    initializer "strong_presenter.setup_action_controller" do |app|
-      ActiveSupport.on_load :action_controller do
-        StrongPresenter.setup_action_controller self
-      end
-    end
-
-    initializer "strong_presenter.setup_action_mailer" do |app|
-      ActiveSupport.on_load :action_mailer do
-        StrongPresenter.setup_action_mailer self
-      end
-    end
-
-    initializer "strong_presenter.setup_active_model_serializers" do |app|
-      ActiveSupport.on_load :active_model_serializers do
-        StrongPresenter::CollectionPresenter.send :include, ActiveModel::ArraySerializerSupport
+    [:action_controller, :action_mailer, :active_model_serializers].each do |klass|
+      initializer "strong_presenter.setup_#{klass}" do |app|
+        ActiveSupport.on_load klass do
+          StrongPresenter.send "setup_#{klass}", self
+        end
       end
     end
 

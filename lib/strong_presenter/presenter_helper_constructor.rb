@@ -7,8 +7,13 @@ module StrongPresenter
       @controller_class = controller_class
       @factory = StrongPresenter::Factory.new(options.slice!(:only, :except))
       @block = block
+      @action_matcher = setup_action_matcher(options)
+    end
+
+    # Returns proc to check if action matches
+    def setup_action_matcher(options)
       options.each { |k,v| options[k] = Array(v).map(&:to_sym) unless v.nil? }
-      @action_matcher = lambda { |action| (options[:only].nil? || options[:only].include?(action)) && (options[:except].nil? || !options[:except].include?(action))}
+      ->(action) { (options[:only].nil? || options[:only].include?(action)) && (options[:except].nil? || !options[:except].include?(action)) }
     end
 
     # call to construct helper
