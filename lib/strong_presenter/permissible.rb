@@ -17,7 +17,7 @@ module StrongPresenter
     # @example Attribute paths can be specified using symbol arrays. If an author name is normally accessed using @article.author.name:
     #   ArticlePresenter.new(@article).permit([:author, :name])
     #
-    # @params [[Symbols*]*] attribute_paths
+    # @param [[Symbols*]*] attribute_paths
     #   the attributes to permit. An array of symbols represents an attribute path.
     # @return [self]
     def permit *attribute_paths
@@ -33,10 +33,9 @@ module StrongPresenter
 
     # Selects the attributes given which have been permitted - an array of attributes. Attributes are
     # symbols, and attribute paths are arrays of symbols.
-    #
-    # @params [[Symbols*]*] attribute_paths
+    # @param [Array<Symbol>*] attribute_paths
     #   the attribute paths to check. The attribute paths may also have arguments.
-    # @return [[Symbols*]*] attribute (paths)
+    # @return [Array<Array<Symbol>, Symbol>] attribute (paths)
     def filter *attribute_paths
       select_permitted(*attribute_paths).map{ |attribute| attribute.first if attribute.size == 1 } # un-pack symbol if array with single symbol
     end
@@ -46,16 +45,25 @@ module StrongPresenter
       @permitted_attributes ||= StrongPresenter::Permissions.new
     end
 
+    # Selects the attributes given which have been permitted - an array of attributes
+    # Each returned attribute paths will be an array, even if it consists of only 1 symbol
+    # @param [Array<Symbols>*] attribute_paths
+    #   the attribute paths to check. The attribute paths may also have arguments.
+    # @return [Array<Array<Symbol>>] attribute (paths)
     def select_permitted *attribute_paths
       permitted_attributes.select_permitted permissions_prefix, *attribute_paths
     end
 
-    private
-    def link_permitted_attributes permitted_attributes, path = []
-      @permitted_attributes = permitted_attributes.merge @permitted_attributes
-      self.permissions_prefix = path
+    # Links presenter to permissions group of given presenter.
+    # @param [Presenter] parent_presenter
+    # @param [Array<Symbol>] relative_path
+    #   The prefix prepended before every permission check relative to parent presenter.
+    def link_permissions parent_presenter, relative_path = []
+      self.permissions_prefix = parent_presenter.send(:permissions_prefix) + Array(relative_path)
+      @permitted_attributes = parent_presenter.send(:permitted_attributes).merge @permitted_attributes, permissions_prefix
     end
 
+    private
     attr_writer :permissions_prefix
     def permissions_prefix
       @permissions_prefix ||= []

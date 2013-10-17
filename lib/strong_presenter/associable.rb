@@ -18,9 +18,10 @@ module StrongPresenter
       #   @yieldparam [Presenter] the association presenter
       #   @return [void]
       def presents_association(association, options = {})
-        options = Associable.parse_options(options, association, &method(:object_class))
+        options.assert_valid_keys(:with, :scope)
+        options[:with] = Associable.object_association_class(object_class, association) unless options.has_key? :with
         presenter_associations[association] ||= StrongPresenter::PresenterAssociation.new(association, options) do |presenter|
-          presenter.send :link_permitted_attributes, permitted_attributes, self.send(:permissions_prefix) + [association]
+          presenter.link_permissions self, association
           yield presenter if block_given?
         end
         define_method(association) do
@@ -54,14 +55,6 @@ module StrongPresenter
     end
 
     protected
-
-    # Parse options for presents_association.
-    # Sets options[:with] if it is not set, and it can be inferred from the association
-    def self.parse_options(options, association, &object_class)
-      options.assert_valid_keys(:with, :scope)
-      options[:with] = Associable.object_association_class(object_class.call, association) unless options.has_key? :with
-      options
-    end
 
     # infer association class if possible
     def self.object_association_class(object_class, association)

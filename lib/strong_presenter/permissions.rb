@@ -83,9 +83,11 @@ module StrongPresenter
     # Merges the permissions from another Permissions object
     #
     # @param [Permissions] permissions
+    # @param [Array<Symbol>] prefix
+    #   prefix to prepend to paths in permissions
     # @return self
-    def merge permissions
-      permitted_paths.merge permissions.permitted_paths if permissions.is_a? self.class
+    def merge permissions, prefix = []
+      permitted_paths.merge permissions.permitted_paths.map{|path| prefix+path} if permissions.is_a? self.class
       self
     end
 

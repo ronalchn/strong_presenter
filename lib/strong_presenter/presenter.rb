@@ -131,8 +131,6 @@ module StrongPresenter
       @object
     end
 
-    private
-
     class << self
       def inferred_presenter(object)
         Inferrer.new(object.class.name).inferred_class { |name| "#{name}Presenter" } or raise StrongPresenter::UninferrablePresenterError.new(self)
