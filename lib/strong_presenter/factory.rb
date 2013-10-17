@@ -59,9 +59,15 @@ module StrongPresenter
       end
 
       def collection?
-        object.is_a? Enumerable
+        object.is_a?(Enumerable) or is_a?("ActiveRecord::Associations::CollectionProxy") # or any other wrappers
       end
 
+      # Checks if object is an instance of klass, false in case klass does not exist.
+      def is_a? klass
+        object.is_a? klass.constantize
+      rescue NameError
+        false
+      end
     end
   end
 end

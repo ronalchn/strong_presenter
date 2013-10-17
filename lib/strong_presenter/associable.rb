@@ -19,17 +19,13 @@ module StrongPresenter
       #   @return [void]
       def presents_association(association, options = {})
         options.assert_valid_keys(:with, :scope)
-        begin
-          association_class = object_class.reflect_on_associations[association].klass
-          options[:with] = "#{association_class}Presenter".constantize # depends on ActiveRecord
-        rescue NameError
-        end unless options.has_key? :with
+        options[:with] = Associable.object_association_class(object_class, association) unless options.has_key? :with
         presenter_associations[association] ||= StrongPresenter::PresenterAssociation.new(association, options) do |presenter|
           presenter.send :link_permitted_attributes, permitted_attributes, self.send(:permissions_prefix) + [association]
           yield if block_given?
         end
         define_method(association) do
-          presenter_associations[association] ||= self.class.send(:presenter_associations)[association].wrap(self)
+          self.class.send(:presenter_associations)[association].wrap(self)
         end
       end
 
@@ -52,16 +48,31 @@ module StrongPresenter
         associations.each { |association| presents_association(association, options) {|presenter| yield if block_given?} }
       end
 
+      private
       def presenter_associations
         @presenter_associations ||= {}
       end
     end
 
-    private
+    protected
 
+    # obtain class of association from object
+    def self.object_association_class(object_class, association)
+      if self.descendant_of(object_class, "ActiveRecord::Reflection")
+        association_class = object_class.reflect_on_association(association).klass
+      else
+        return nil
+      end
+      "#{association_class}Presenter".constantize
+    rescue NameError
+      nil
+    end
 
-    def presenter_associations
-      @presenter_associations ||= {}
+    def self.descendant_of(object_class, klass)
+      object_class.ancestors.include? klass.constantize
+    rescue NameError
+      false
     end
   end
 end
+

@@ -147,7 +147,8 @@ module StrongPresenter
       end
 
       def set_presenter_collection
-        const_set "Collection", collection_presenter
+        collection_presenter = get_collection_presenter
+        const_set "Collection", collection_presenter unless const_defined?("Collection")
       end
 
       private
@@ -157,7 +158,7 @@ module StrongPresenter
         super
       end
 
-      def collection_presenter
+      def get_collection_presenter
         collection_presenter = Inferrer.new(name).chomp("Presenter").inferred_class {|name| "#{name.pluralize}Presenter"}
         return collection_presenter unless collection_presenter.nil? || collection_presenter == self
         Class.new(StrongPresenter::CollectionPresenter).presents_with(self)

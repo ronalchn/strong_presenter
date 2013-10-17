@@ -11,6 +11,7 @@ require 'strong_presenter'
 require 'rails/version'
 require 'action_controller'
 require 'action_controller/test_case'
+require 'support/models'
 
 RSpec.configure do |config|
   config.treat_symbols_as_metadata_keys_with_true_values = true
@@ -32,6 +33,9 @@ module Namespaced
 
   class OtherPresenter < StrongPresenter::Presenter; end
 end
+
+class WheelPresenter < StrongPresenter::Presenter; end
+class CarPresenter < StrongPresenter::Presenter; end
 
 # After each example, revert changes made to the class
 def protect_class(klass)

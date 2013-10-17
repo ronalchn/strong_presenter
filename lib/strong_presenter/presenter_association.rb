@@ -17,7 +17,7 @@ module StrongPresenter
       associated = parent.send(:object).send(association)
       associated = associated.send(scope) if scope
 
-      @wrapped = factory.wrap(associated) do |presenter|
+      factory.wrap(associated) do |presenter|
         parent.instance_exec presenter, &@block if @block
       end
     end

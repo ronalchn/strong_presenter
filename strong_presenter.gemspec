@@ -29,4 +29,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency 'minitest-rails', '~> 0.2'
   gem.add_development_dependency 'capybara'
   gem.add_development_dependency 'active_model_serializers'
+  gem.add_development_dependency 'activerecord', '>= 3.0'
 end
