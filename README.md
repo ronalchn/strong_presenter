@@ -228,10 +228,36 @@ array of only the visible columns, and we use our `fields` hash to label it.
 We can decide what attributes to present based on a GET parameter input, for example:
 
 ```erb
-<% @user_presenter.presents( params[:columns].split(',') ).each do |value| %><%= content_tag :td, value %><% end %>
+<% @user_presenter.presents( params[:columns].split(',') ).each do |value| %>
+  <%= content_tag :td, value %>
+<% end %>
 ```
 
 Because of the `permit` checks, there is no danger that private information will be revealed.
+
+#### Permissions Paths
+
+Association methods can be permitted by passing an array.
+
+```rb
+@article_presenter.permit :body, [:author, :name]
+```
+
+Then, presenting it:
+
+```erb
+<%= @article_presenter.present [:author, :name] %>
+```
+
+is equivalent to `@article_presenter.author.name`, except it includes the permission check.
+
+#### Permissions Groups
+
+Currently, each group of presenters shares a single permissions object. Therefore, each element in a collection references the same permissions object. The presenter for each association also shares the same permissions object. This means that permitting a method will permit it for all presenters in the group, and it is not possible for two presenters in the same collection to have different methods permitted.
+
+Everytime you get a presenter through a collection or association, it will be added to the permissions group. To start a new group, you will need to initialize it yourself.
+
+It is the intention that in version 0.2.0, permissions groups (for efficiency in a simple implementation), will be removed, and each new presenter will implement copy on write with the permissions object. This will retain efficiency where `permit` is called early before forking new presenters, but allow different permissions for each presenter. This will change the behaviour of what is considered permitted, but if `permit` is called before using the presenter, the behaviour will not change.
 
 ### Testing
 
