@@ -11,13 +11,13 @@ A number of features have been copied from Draper and refined.
 
 ## Why use Presenters?
 
-Presenters wrap your models, to deal with presentation, so your models can concentrate on domain logic. Instead of using a helper method to display some information in a view, you can implement the method in a presenter instead.
+Presenters deal with presentation, so your models can concentrate on domain logic. Instead of using a helper methods, you can implement the method in a presenter instead.
 
-Others have used decorators, which are very similar, for this purpose. While decorators can also be used for presentation logic, it may cause some confusion in your application. Presenters are designed to help you to present - a market-oriented solution where unneccessary features can be discarded. Decorators are a coding pattern which can be forged to help you present - a product-oriented solution.
+Others have used decorators for this purpose - while they can be used for presentation logic, it may cause some confusion in your application. Presenters are designed to help you to present - a market-oriented solution. Decorators are a coding pattern which can be used for presentation - a product-oriented solution.
 
-The decorator coding pattern involves using delegation to wrap the model, adding new behaviour to the base object. It may involve overriding some methods to present the data in a visually appealing way. The decorator pattern will generally wrap a object, but also keep the decorator acting like an instance of the base object - but this is not really what you want for presentation. It is also supposed to allow you to decorate a decorated object multiple times - to keep adding new behaviour to the object.
+The decorator coding pattern involves using delegation to wrap the model, adding new behaviour to the base object, possibly overriding some methods to present data in a visually appealing way. The decorator pattern not only wraps an object, but also involves keeping the decorated object acting like an instance of the base object (allowing multiple redecorations) - but this is not really what you want for presentation.
 
-However, when we consider presentation, we are interested in reading the information, not in mutating the object, so we want to hide any attribute setters, or other "non-constant" methods. We are also not necessary interested in wrapping the object with multiple layers - if we really wanted, we could use a separately wrapped copy of the object. On the other hand, if we want to share some presentation logic between different models, instead of trying to wrap the a model with multiple presenters - to take into account the various behaviour we want, we should be using one presenter, which can include various behaviour using mixins. That is what StrongPresenter tries to give you.
+When we consider presentation, we are interested in reading the information, not further mutating the object, so we want to hide attribute setters, or other domain logic. We are also not interested in wrapping multiple layers around the object (we can use multiple still use presenters of the same object). If we want to share presentation logic between different models, we should instead use one presenter per model, including various behaviour using mixins.
 
 While there exist other gems for presentation, we hope to provide a more natural interface to create your presenters.
 
@@ -25,7 +25,7 @@ While there exist other gems for presentation, we hope to provide a more natural
 
 Requires Rails. Rails 3.2+ is supported (probably works on 3.0, 3.1 as well).
 
-Add this line to your application's Gemfile:
+Add this line to your application''s Gemfile:
 
     gem 'strong_presenter'
 
@@ -37,13 +37,15 @@ Or install it yourself as:
 
     $ gem install strong_presenter
 
-This installs 0.0.1, which has a slightly different API. Version 0.1.0 is under development. While basic features have specs, newer features are not completely tested, so may not be stable for complex use-cases. Use `gem 'strong_presenter', :github => 'ronalchn/strong_presenter'` to install the development version.
+Or to use the edge version, add this to your Gemfile:
+
+    gem 'strong_presenter', :github => 'ronalchn/strong_presenter'
 
 ## Usage
 
 ### Writing Presenters
 
-Presenters are stored in `app/presenters`, they inherit from `StrongPresenter::BasePresenter` and are named based on the model they decorate. We also recommend you create an `ApplicationPresenter` where you can write macros for each presenter.
+Presenters are stored in `app/presenters`, they inherit from `StrongPresenter::BasePresenter` and are named based on the model they decorate. We also recommend you create an `ApplicationPresenter`.
 
 ```ruby
 # app/presenters/user_presenter.rb
@@ -95,7 +97,7 @@ Pass the model to a corresponding collection presenter:
 @users_presenter = UserPresenter::Collection.new(@users)
 ```
 
-If you want to add methods to your collection presenter, inherit from `StrongPresenter::CollectionPresenter`:
+To add methods to your collection presenter, inherit from `StrongPresenter::CollectionPresenter`:
 
 ```ruby
 # app/presenters/users_presenter.rb
@@ -110,7 +112,16 @@ It wraps each item in the collection with the corresponding singular presenter i
 
 ### Model Associations
 
-Sorry, this feature has not been implemented yet.
+To automatically wrap associations with a presenter, use `presents_association` or `presents_associations`:
+
+```ruby
+# app/presenters/users_presenter.rb
+class UsersPresenter < StrongPresenter::CollectionPresenter
+  presents_association :comments
+end
+```
+
+A specific presenter can be specified using the `:with` option, otherwise it is inferred from the association. A scope can be specified using the `:scope` option. It can also yield the new presenter to a block.
 
 ### When to Wrap the Model with the Presenter
 
@@ -189,7 +200,7 @@ class UserController < ApplicationController
 end
 ```
 
-To remove authorization checks, simply call `permit!` on an instance of a presenter, or on the class.
+To remove authorization checks, simply call `permit!` on an instance of a presenter.
 
 There is also a `filter` method to help you with tables:
 
@@ -197,13 +208,13 @@ There is also a `filter` method to help you with tables:
 <% fields = { :username => "Username", :name => "Name", :email => "E-mail" } %>
 <table>
   <tr>
-    <% user.filter( *fields.keys ) do |key| %>
+    <% @users_presenter.filter( *fields.keys ) do |key| %>
       <th><%= fields[key] %></th>
     <% end %>
   </tr>
   <% @users_presenter.each do |user_presenter| %>
     <tr>
-      <% user.presents( *fields.keys ).each do |value| %>
+      <% user_presenter.presents( *fields.keys ).each do |value| %>
         <%= content_tag :td, value %>
       <% end %>
     </tr>
@@ -217,7 +228,7 @@ array of only the visible columns, and we use our `fields` hash to label it.
 We can decide what attributes to present based on a GET parameter input, for example:
 
 ```erb
-<% user.presents( params[:columns].split(',') ).each do |value| %><%= content_tag :td, value %><% end %>
+<% @user_presenter.presents( params[:columns].split(',') ).each do |value| %><%= content_tag :td, value %><% end %>
 ```
 
 Because of the `permit` checks, there is no danger that private information will be revealed.
@@ -242,6 +253,22 @@ In doing so, your presenters will no longer have access to your application''s h
 StrongPresenter::ViewContext.test_strategy :fast do
   include ApplicationHelper
 end
+```
+
+### Generating Presenters
+
+With StrongPresenter installed:
+
+```sh
+rails generate resource Article
+```
+
+will include a presenter.
+
+To generate a presenter by itself:
+
+```sh
+rails generate presenter Article
 ```
 
 ## Acknowledgements
