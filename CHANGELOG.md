@@ -2,11 +2,19 @@
 
 ## 0.2.0 In development
 
-Changes to be made:
+This release focuses on tightening up security of the permit interface
 
-- Remove permissions grouping - convert to copy on write
-- Remove permit_all! class method
-- Require explicit wildcard endings to attribute paths to permit everything `[:association, :nested_association, :*]` to permit all methods in the association
+- Renamed `permit` to `permit!` in Presenter, CollectionPresenter, Permissible
+- Renamed `filter` to `select_permitted` in Presenter, CollectionPresenter, Permissible
+- Permitted paths are only prefixes with wildcard endings if specified explicitly
+  - `[:comments, :*]` permits all the methods in each comment in the comments association, but not further associations
+  - `[:comments, :**]` permits all methods in all associations, no matter how deep (for example it permits `[:comments, :user, :username]`)
+- Wildcards disabled for tainted paths, tainted paths are only permitted if the exact path has been permitted
+  - a path is tainted if any element in the array is tainted, for example `params[:extra_column].split(',')` is tainted
+- `permit_all!` class method removed - use an initializer instead
+- Permissions grouping removed - the permissions of each presenter is independent, with copy on write semantics.
+  - but permitting on a presenter will propagate permissions to the presenters of associations or collection items. This can be inefficient if an object has many associations or the collection has many items. It is recommended that `permit!` is called before associations or collection items are loaded
+- Added `reload!`, which will reset the cache on association or collection presenters. This might be used if the underlying object has changed.
 
 ## 0.1.0 - Stable
 

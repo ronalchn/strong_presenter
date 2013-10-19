@@ -20,6 +20,20 @@ module StrongPresenter
       "#<#{self.class.name} of #{presenter_class || "inferred presenters"} for #{object.inspect}>"
     end
 
+    # Permits given attributes, with propagation to collection items.
+    # @param (see StrongPresenter::Permissible#permit!)
+    def permit! *attribute_paths
+      super
+      @collection.each { |presenter| presenter.permit! *attribute_paths } unless @collection.nil?
+      self
+    end
+
+    # Resets item presenters - clears the cache
+    def reload!
+      @collection = nil
+      self
+    end
+
     protected
     # @return [Class] the presenter class used to present each item, as set by
     #   {#initialize}.

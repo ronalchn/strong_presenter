@@ -22,10 +22,10 @@ module StrongPresenter
         collection = [Model.new, Model.new]
         collection_presenter = CollectionPresenter.new(collection, :with => Presenter)
 
-        expect(collection_presenter[0].filter :z).to be_empty
+        expect(collection_presenter[0].select_permitted :z).to be_empty
 
-        collection_presenter.permit :a, :b, :c
-        permitted = collection_presenter[0].filter :a, :c, :z
+        collection_presenter.permit! :a, :b, :c
+        permitted = collection_presenter[0].select_permitted :a, :c, :z
         expect(permitted).to include(:a, :c)
         expect(permitted).to_not include(:b, :z)
       end

@@ -3,6 +3,7 @@ module StrongPresenter
   # Methods for defining presenter associations
   module Associable
     extend ActiveSupport::Concern
+    include StrongPresenter::Permissible
 
     module ClassMethods
       #   Automatically wraps multiple associations.
@@ -19,13 +20,14 @@ module StrongPresenter
       #   @return [void]
       def presents_association(association, options = {})
         options.assert_valid_keys(:with, :scope)
+        association = association.to_sym
         options[:with] = Associable.object_association_class(object_class, association) unless options.has_key? :with
         presenter_associations[association] ||= StrongPresenter::PresenterAssociation.new(association, options) do |presenter|
           presenter.link_permissions self, association
           yield presenter if block_given?
         end
         define_method(association) do
-          self.class.send(:presenter_associations)[association].wrap(self)
+          presenter_associations[association] ||= self.class.send(:presenter_associations)[association].wrap(self)
         end
       end
 
@@ -52,6 +54,31 @@ module StrongPresenter
       def presenter_associations
         @presenter_associations ||= {}
       end
+    end
+
+    # Permits given attributes, with propagation to associations.
+    # @param (see StrongPresenter::Permissible#permit!)
+    def permit! *attribute_paths
+      super
+      attribute_paths.map{|p|Array(p)}.each do |path| # propagate permit to associations
+        if path == [:**]
+          presenter_associations.each_value { |presenter| presenter.permit! [:**]}
+        elsif path.size>1
+          presenter_associations[path[0]].permit! path.drop(1) if presenter_associations.has_key?(path[0])
+        end
+      end
+      self
+    end
+
+    # Resets association presenters - clears the cache
+    def reload!
+      @presenter_associations.clear
+      self
+    end
+
+    private
+    def presenter_associations
+      @presenter_associations ||= {}
     end
 
     protected

@@ -25,10 +25,10 @@ module StrongPresenter
         expect(@product_presenter.manufacturer.name).to eq "Presented Factory"
       end
 
-      it 'does not allow presenting without permit' do
+      it 'does not allow presenting without permit!' do
         expect(@product_presenter.presents :manufacturer).to be_empty
         expect(@product_presenter.presents [:manufacturer, :name]).to be_empty
-        @product_presenter.permit :name
+        @product_presenter.permit! :name
         expect(@product_presenter.presents [:manufacturer, :name]).to be_empty
       end
 
@@ -36,21 +36,23 @@ module StrongPresenter
         expect(@product_presenter.manufacturer.presents :name).to be_empty
       end
 
-      context 'with association permitted' do
+      context 'with association methods permitted' do
         before(:each) do
-          @product_presenter.permit :manufacturer
+          @product_presenter.permit! [:manufacturer, :*]
         end
 
-        it 'allows presenting association' do
+        it 'allows presenting association if exact match' do
+          expect(@product_presenter.present(:manufacturer)).to be_nil
+          @product_presenter.permit! :manufacturer
           expect(@product_presenter.present(:manufacturer).class).to be ManufacturerPresenter
         end
 
-        it 'allows presenting association attributes' do
+        it 'allows presenting association methods' do
           expect(@product_presenter.present [:manufacturer, :name]).to eq "Presented Factory"
         end
 
-        it 'allows presenting association attributes with arguments' do
-          expect(@product_presenter.present [:manufacturer, :name, " arg"]).to eq "Presented Factory arg"
+        it 'cannot present method with arguments' do
+          expect(@product_presenter.present [:manufacturer, :name, " arg"]).to be_nil
         end
 
         it 'allows presenting from association' do
@@ -59,7 +61,7 @@ module StrongPresenter
       end
 
       it 'rejects full path from association' do
-        @product_presenter.permit [:manufacturer, :name]
+        @product_presenter.permit! [:manufacturer, :name]
         expect(@product_presenter.manufacturer.presents [:manufacturer, :name]).to be_empty
       end
     end
@@ -104,16 +106,24 @@ module StrongPresenter
         expect(presenter.wheels.class).to be WheelPresenter::Collection
       end
 
-      it 'infers presenter of polymorphic association repeatedly' do
+      it 'infers presenter of polymorphic association' do
         WheelPresenter.presents_association :vehicle
 
         wheel = Wheel.new
         wheel.vehicle = Car.new
         presenter = WheelPresenter.new(wheel)
         expect(presenter.vehicle.class).to be CarPresenter
+      end
 
-        # if presenter.vehicle is cached, the next example will be incorrect
+      it 'infers new association after reload' do
+        WheelPresenter.presents_association :vehicle
+        wheel = Wheel.new
+        wheel.vehicle = Car.new
+        presenter = WheelPresenter.new(wheel)
+        presenter.vehicle
         wheel.vehicle = Wheel.new
+        expect(presenter.vehicle.class).to be CarPresenter
+        expect(presenter.reload!.vehicle.class).to be WheelPresenter
         expect(presenter.vehicle.class).to be WheelPresenter
       end
     end

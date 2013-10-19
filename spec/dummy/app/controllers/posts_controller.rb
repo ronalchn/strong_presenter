@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   presents :post, :with => StrongPresenter::Presenter, :only => :show
   presents :post, :with => PostPresenter, :only => :show do |presenter|
-    presenter.permit(:permit_to_present, :peek_a_boo)
+    presenter.permit!(:permit_to_present, :peek_a_boo)
   end
   presents :post, :with => StrongPresenter::Presenter, :only => [:index]
   presents :post, :with => StrongPresenter::Presenter, :except => [:show, :new]

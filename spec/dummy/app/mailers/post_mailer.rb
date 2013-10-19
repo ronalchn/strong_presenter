@@ -6,7 +6,7 @@ class PostMailer < ApplicationMailer
   helper :application
 
   def presented_email(post)
-    @post = PostPresenter.new(post).permit!
+    @post = PostPresenter.new(post).permit_all!
     mail to: "to@example.com", subject: "A presented post"
   end
 

@@ -84,6 +84,7 @@ module StrongPresenter
     #
     def presents *attributes
       select_permitted(*attributes).map do |args|
+        args = Array(args)
         obj = self # drill into associations
         while (args.size > 1) && self.class.send(:presenter_associations).include?(args[0]) do
           obj = obj.public_send args.slice!(0)
