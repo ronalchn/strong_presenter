@@ -127,6 +127,131 @@ module StrongPresenter
         expect(presenter.vehicle.class).to be WheelPresenter
       end
     end
+
+    describe 'without suitable presenter' do
+      protect_class Product
+      it 'throws uninferrable presenter' do
+        Product.send(:attr_accessor, :string)
+        ProductPresenter.presents_association :string
+        Product.send(:define_method, :initialize) { self.string = "String"}
+        
+        presenter = ProductPresenter.new(Product.new)
+        expect{presenter.string}.to raise_error(StrongPresenter::UninferrablePresenterError)
+      end
+    end
+
+    describe 'Permissible' do
+      protect_class Product
+      protect_class ProductPresenter
+      before (:each) do
+        Product.send(:attr_accessor, :name, :description, :price, :subproducts, :other)
+        Product.send(:define_method, :initialize) do |name, description = "Description", price = 1, subproducts = []|
+          self.name = name
+          self.description = description
+          self.price = price
+          self.subproducts = Array(subproducts)
+          self.other = Wheel.new
+        end
+        ProductPresenter.presents_association :subproducts
+        ProductPresenter.presents_association :other
+        ProductPresenter.delegate :name, :description, :price
+        @product = Product.new("Main", "I, Main", 4.2, [Product.new("Sub A", "Small", 8), Product.new("Component B")])
+        @product_presenter = ProductPresenter.new(@product)
+      end
+
+      it 'collection association inherits permissions' do
+        @product_presenter.permit! [:subproducts, :name]
+        expect(@product_presenter.subproducts.select_permitted(:name, :price)).to eq [:name]
+      end
+
+      it 'association inherits permissions' do
+        @product_presenter.permit! [:other, :stuff]
+        expect(@product_presenter.other.select_permitted(:other, :stuff)).to eq [:stuff]
+      end
+
+      it 'collection item inherits permissions' do
+        @product_presenter.permit! [:subproducts, :name]
+        expect(@product_presenter.subproducts[0].presents(:name, :price)).to eq ["Sub A"]
+      end
+
+      it 'forwards permit to associations' do
+        other_presenter = @product_presenter.other
+        @product_presenter.permit! [:other, :stuff]
+        expect(other_presenter.select_permitted(:other, :stuff)).to eq [:stuff]
+      end
+
+      it 'forwards permit to association collection items' do
+        subproduct_presenter = @product_presenter.subproducts[0]
+        @product_presenter.permit! [:subproducts, :name]
+        expect(subproduct_presenter.presents(:name, :price)).to eq ["Sub A"]
+      end
+
+      it 'does not feed permissions to siblings' do
+        @product_presenter.subproducts[0].permit! :name
+        expect(@product_presenter.subproducts[0].presents(:name, :price)).to eq ["Sub A"]
+        expect(@product_presenter.subproducts[1].presents(:name, :price)).to be_empty
+      end
+
+      it 'appears to clear permissions on reload' do
+        @product_presenter.subproducts[0].permit! :name
+        expect(@product_presenter.reload!.subproducts[0].presents(:name, :price)).to be_empty
+      end
+
+      it 'can add to association permissions' do
+        @product_presenter.permit! [:subproducts, :name]
+        @product_presenter.subproducts[0].permit! :price
+        expect(@product_presenter.subproducts[0].presents(:name, :price)).to eq ["Sub A", 8]
+      end
+
+      it 'can add to collection permissions' do
+        @product_presenter.permit! [:subproducts, :name]
+        @product_presenter.subproducts.permit! :description
+        expect(@product_presenter.subproducts[0].presents(:name, :price, :description)).to eq ["Sub A", "Small"]
+      end
+
+      it 'can add to item permissions' do
+        @product_presenter.subproducts.permit! :description
+        @product_presenter.subproducts[0].permit! :price
+        expect(@product_presenter.subproducts[0].presents(:name, :price, :description)).to eq [8, "Small"]
+        expect(@product_presenter.subproducts[1].presents(:name, :price, :description)).to eq ["Description"]
+      end
+
+      it 'adds propagated permissions' do
+        @product_presenter.subproducts[0].permit! :price
+        @product_presenter.permit! [:subproducts, :name]
+        expect(@product_presenter.subproducts[0].presents(:name, :price, :description)).to eq ["Sub A", 8]
+      end
+
+      it 'propagates double wildcard' do
+        @product_presenter.subproducts[0].permit! :price
+        @product_presenter.permit! :**
+        expect(@product_presenter.subproducts[0].presents(:name, "price", :description)).to eq ["Sub A", 8, "Small"]
+      end
+
+      it 'does not propagate single wildcard' do
+        @product_presenter.subproducts[0].permit! :price
+        @product_presenter.permit! :*
+        expect(@product_presenter.subproducts[0].presents(:name, :price, :description)).to eq [8]
+      end
+
+      it 'can propagate string path to collection' do
+        @product_presenter.subproducts.permit! :price
+        @product_presenter.permit! ["subproducts", "name"]
+        expect(@product_presenter.subproducts[0].presents(:name, :price, :description)).to eq ["Sub A", 8]
+      end
+
+      it 'propagates wildcard ending' do
+        @product_presenter.subproducts[0].permit! :price
+        @product_presenter.permit! [:subproducts, :*]
+        expect(@product_presenter.subproducts[0].presents(:name, "price", :description)).to eq ["Sub A", 8, "Small"]
+      end
+
+      it 'handles taint with mixture of wildcard and exact matches' do
+        @product_presenter.subproducts[0].permit! :price
+        @product_presenter.permit! [:subproducts, :*]
+        expect(@product_presenter.subproducts[0].presents(:name, "price".taint, "description".taint)).to eq ["Sub A", 8]
+      end
+    end
   end
 end
 

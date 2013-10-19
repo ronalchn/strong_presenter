@@ -60,11 +60,13 @@ module StrongPresenter
     # @param (see StrongPresenter::Permissible#permit!)
     def permit! *attribute_paths
       super
-      attribute_paths.map{|p|Array(p)}.each do |path| # propagate permit to associations
+      attribute_paths.each do |path| # propagate permit to associations
+        path = Array(path)
         if path == [:**]
           presenter_associations.each_value { |presenter| presenter.permit! [:**]}
         elsif path.size>1
-          presenter_associations[path[0]].permit! path.drop(1) if presenter_associations.has_key?(path[0])
+          association = path[0].to_sym
+          presenter_associations[association].permit! path.drop(1) if presenter_associations.has_key?(association)
         end
       end
       self

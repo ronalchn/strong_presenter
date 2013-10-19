@@ -103,20 +103,22 @@ module StrongPresenter
     end
 
     private
-    def copy?
+    # Is this still referencing another objects permissions?
+    def reference?
       !@prefix_path.nil?
     end
 
-    def copy_on_write! # makes a copy if required
+    # Make a copy if this still references something else, since we are planning on writing soon
+    def copy_on_write!
       if prefix_path == []
         @permitted_paths = permitted_paths.dup
-      elsif !prefix_path.nil?
+      elsif reference?
         @permitted_paths, old_set = Set.new, permitted_paths
         old_set.each do |path|
           @permitted_paths << path[prefix_path.size...path.size] if path[0...prefix_path.size] == prefix_path
         end
       end
-      prefix_path = nil
+      @prefix_path = nil
     end
 
     def path_tainted? attribute_path

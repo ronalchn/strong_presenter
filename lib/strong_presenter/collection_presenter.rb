@@ -14,6 +14,8 @@ module StrongPresenter
       options.assert_valid_keys(:with)
       @object = object
       @presenter_class = options[:with]
+
+      yield self if block_given?
     end
 
     def to_s
