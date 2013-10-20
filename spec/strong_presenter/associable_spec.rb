@@ -7,12 +7,10 @@ module StrongPresenter
       protect_class ProductPresenter
 
       before(:each) do
-        class Manufacturer < Model
-          def name; "Factory"; end
-        end
-        class ManufacturerPresenter < StrongPresenter::Presenter
-          def name(*args); "Presented #{object.name}#{(args+[""])[0]}"; end
-        end
+        stub_const('Manufacturer', Class.new(Model))
+        Manufacturer.send(:define_method, :name) {"Factory"}
+        stub_const('ManufacturerPresenter', Class.new(StrongPresenter::Presenter))
+        ManufacturerPresenter.send(:define_method, :name) { |*args| "Presented #{object.name}#{(args+[""])[0]}" }
         Product.send(:define_method, :manufacturer) { @manufacturer ||= Manufacturer.new }
         Product.send(:define_method, :name) { "Product" }
         ProductPresenter.presents_association :manufacturer
@@ -66,14 +64,36 @@ module StrongPresenter
       end
     end
 
+    context 'with missing constants' do
+      protect_class Product
+      protect_class ProductPresenter
+
+      it 'can declare association without ActiveRecord' do
+        hide_const('ActiveRecord')
+        Product.send(:define_method, :inverse) { @inverse ||= Product.new }
+        ProductPresenter.presents_association :inverse
+        @product_presenter = ProductPresenter.new(Product.new)
+        expect(@product_presenter.inverse.class).to be ProductPresenter
+      end
+
+      it 'can declare association with empty ActiveRecord' do
+        stub_const('ActiveRecord', Module.new)
+        Product.send(:define_method, :inverse) { @inverse ||= Product.new }
+        ProductPresenter.presents_association :inverse
+        @product_presenter = ProductPresenter.new(Product.new)
+        expect(@product_presenter.inverse.class).to be ProductPresenter
+      end
+    end
+
     context 'with CollectionPresenter' do
       protect_class Product
       protect_class ProductPresenter
       before(:each) do
+        stub_const('ProductList', Class.new(Model))
         Product.send(:define_method, :initialize) { |name| @name = name }
         Product.send(:attr_reader, :name)
         ProductPresenter.send(:define_method, :name) { object.name }
-        class ProductList < Model
+        class ProductList
           attr_accessor :products
           def initialize; @products = [Product.new("X"), Product.new("Y"), Product.new("Z")]; end
         end
@@ -104,6 +124,30 @@ module StrongPresenter
         car.wheels << Wheel.new
         presenter = CarPresenter.new(car)
         expect(presenter.wheels.class).to be WheelPresenter::Collection
+      end
+
+      it 'cannot infer without presenter' do
+        hide_const('WheelPresenter')
+        CarPresenter.presents_association :wheels
+
+        car = Car.new
+        car.wheels << Wheel.new
+        presenter = CarPresenter.new(car)
+        expect(presenter.wheels.class).to be StrongPresenter::CollectionPresenter
+        expect{presenter.wheels[0]}.to raise_error StrongPresenter::UninferrablePresenterError
+      end
+
+      it 'infers collection presenter on factory construction' do
+        hide_const('WheelPresenter')
+        stub_const('WheelsPresenter', Class.new(StrongPresenter::CollectionPresenter))
+        WheelsPresenter.send(:define_method, :number_of){object.size}
+        CarPresenter.presents_association :wheels
+
+        car = Car.new
+        car.wheels = [Wheel.new, Wheel.new, Wheel.new]
+        presenter = CarPresenter.new(car)
+        expect(presenter.wheels.class).to be WheelsPresenter
+        expect(presenter.wheels.number_of).to be 3
       end
 
       it 'infers presenter of polymorphic association' do

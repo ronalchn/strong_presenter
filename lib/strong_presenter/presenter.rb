@@ -175,8 +175,6 @@ module StrongPresenter
       # Checks whether this presenter class has a corresponding {object_class}.
       def object_class?
         !!(@object_class ||= Inferrer.new(name).chomp("Presenter").inferred_class)
-      rescue NameError
-        false
       end
 
       # Sets the model presented by the class

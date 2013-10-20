@@ -54,7 +54,7 @@ module StrongPresenter
 
     # wrap model with presenter and return
     def wrapped_object(controller)
-      factory.wrap(controller.send :instance_variable_get, @object) { |presenter| self.instance_exec presenter, &block }
+      factory.wrap(controller.send :instance_variable_get, @object) { |presenter| self.instance_exec presenter, &block unless block.nil? }
     end
   end
 end

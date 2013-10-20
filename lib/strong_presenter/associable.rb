@@ -87,20 +87,31 @@ module StrongPresenter
 
     # infer association class if possible
     def self.object_association_class(object_class, association)
-      if self.descendant_of(object_class, "ActiveRecord::Reflection")
-        association_class = object_class.reflect_on_association(association).klass
-      else
-        return nil
-      end
-      "#{association_class}Presenter".constantize
+      klass, collection = get_orm_association_info(object_class, association)
+      return nil if klass.nil?
+      "#{klass}Presenter".constantize
     rescue NameError
-      nil
+      get_collection_presenter(klass) if collection # else nil
+    end
+
+    def self.get_orm_association_info(object_class, association)
+      if descendant_of(object_class, "ActiveRecord::Reflection")
+        object_class.reflect_on_association(association).instance_eval { [klass, collection?] }
+      else
+        nil
+      end
     end
 
     def self.descendant_of(object_class, klass)
       object_class.ancestors.include? klass.constantize
     rescue NameError
       false
+    end
+
+    def self.get_collection_presenter(klass)
+      "#{"#{klass}".pluralize}Presenter".constantize
+    rescue NameError
+      StrongPresenter::CollectionPresenter
     end
   end
 end
