@@ -147,7 +147,7 @@ module StrongPresenter
 
       def set_presenter_collection
         collection_presenter = get_collection_presenter
-        const_set "Collection", collection_presenter unless const_defined?("Collection")
+        const_set "Collection", collection_presenter # will overwrite if constant only defined in superclass
       end
 
       private
