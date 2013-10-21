@@ -78,23 +78,12 @@ module StrongPresenter
     # @param [[Object, Array]*] *attribute_paths
     def permit *attribute_paths
       copy_on_write!
-      # don't permit if already permitted
-      reject_permitted(*attribute_paths).each do |attribute_path|
-        permitted_paths << canonicalize(attribute_path) # prefix_path = [] because of copy on write
+      attribute_paths = attribute_paths.map{|path|canonicalize(path).taint} # exact match
+      reject_permitted(*attribute_paths).each do |attribute_path| # don't permit if already permitted
+        permitted_paths << attribute_path # prefix_path = [] because of copy on write
       end
       self
     end
-
-#    # Merges the permissions from another Permissions object
-#    #
-#    # @param [Permissions] permissions
-#    # @param [Array<Symbol>] prefix
-#    #   prefix to prepend to paths in permissions
-#    # @return self
-#    def merge permissions, prefix = []
-#      permitted_paths.merge permissions.permitted_paths.map{|path| prefix+path} if permissions.is_a? self.class
-#      self
-#    end
 
     protected
 

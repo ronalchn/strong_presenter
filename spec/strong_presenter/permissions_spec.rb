@@ -35,6 +35,13 @@ module StrongPresenter
 
         expect(attrpathsarg).to eq attrpaths
       end
+
+      it 'permits specific path after wildcard' do
+        permissions = Permissions.new.permit([:prefix, :*])
+        expect(permissions.permitted?([:prefix, "specific".taint])).to be false
+        permissions.permit([:prefix, :specific])
+        expect(permissions.permitted?([:prefix, "specific".taint])).to be true
+      end
     end
 
     describe "#permitted?" do
