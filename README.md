@@ -25,7 +25,7 @@ While there exist other gems for presentation, we hope to provide a more natural
 
 Requires Rails. Rails 3.2+ is supported (probably works on 3.0, 3.1 as well).
 
-Add this line to your application''s Gemfile:
+Add this line to your application&#39;s Gemfile:
 
     gem 'strong_presenter'
 
@@ -108,7 +108,7 @@ class UsersPresenter < StrongPresenter::CollectionPresenter
 end
 ```
 
-It wraps each item in the collection with the corresponding singular presenter inferred from the class name, but it can be set using the `:with` option in the constructor, or by calling `presents_with :user` (for example), in the class definition.
+It wraps each item in the collection with the corresponding singular presenter inferred from the class name, but it can be set using the `:with` option in the constructor, or by calling `presents_with :user` (for example), in the class definition. The `::Collection` constant of each presenter will automatically be set to the collection presenter with a matching plural name.
 
 ### Model Associations
 
@@ -147,9 +147,18 @@ class UserController < ApplicationController
 end
 ```
 
+Subsequently, in our view, we can use:
+
+```erb
+  Username: <%= user.username %><br>
+  Email: <%= user.email %><br>
+```
+
 If the `:with` option is not passed, it will be inferred by using the model class name. `:only` and `:except` sets the controller actions it applies to.
 
-### Permit!
+### Permit! and `present`
+
+#### Basics
 
 You can simply use the presenter in the view:
 
@@ -157,16 +166,16 @@ You can simply use the presenter in the view:
 Avatar: <%= @user_presenter.avatar %>
 ```
 
-However, sometimes you will want to display information only if it is permitted. To do this, simply pass the attribute symbols to the `presents` method on the presenter, and it will only display it if it is permitted. This is especially powerful because it controls the display of not just the attribute value, but everything that is passed in the block.
+However, sometimes you will want to display information only if it is permitted. To do this, simply pass the attribute symbols to the `presents` method on the presenter, and it will only display it if it is permitted. This is quite useful because it controls the display of not just the attribute value, but everything that is passed in the block. If no block is given, the results are returned in an array.
 
 ```erb
 <% fields = { :username => "Username", :name => "Name", :email => "E-mail" } %>
-<% user.presents *fields.keys do |key, value| # user = @user_presenter because of the call to `presents` in the controller class %>
+<% @user_presenter.presents *fields.keys do |key, value| %>
   <b><%= fields[key] %>:</b> <%= value %><br>
 <% end %>
 ```
 
-The `present` method is also available to display a single attribute:
+The `present` method is also available to display a single attribute. If no block is given, the result is returned, ready to display.
 
 ```erb
 <b>Hello <%= user.present :name %></b><br>
@@ -175,13 +184,13 @@ The `present` method is also available to display a single attribute:
 <% end %>
 ```
 
-To permit the display of the attributes, call `permit` on the presenter with the attribute symbols in the controller.
+To permit the display of the attributes, call `permit!` on the presenter with the attribute symbols in the controller.
 
 ```ruby
 class UserController < ApplicationController
   def show
     @user = User.find(params[:id])
-    @user_presenter = UserPresenter.new(@user).permit :username, :name # but not :email
+    @user_presenter = UserPresenter.new(@user).permit! :username, :name # but not :email
   end
 end
 ```
@@ -191,8 +200,8 @@ You can also call it when using the `presents` method in the controller:
 ```ruby
 class UserController < ApplicationController
   presents :user do |presenter|
-    presenter.permit :username, :name
-    presenter.permit :email if current_user.admin?
+    presenter.permit! :username, :name
+    presenter.permit! :email if current_user.admin?
   end
   def show
     @user = User.find(params[:id])
@@ -200,15 +209,13 @@ class UserController < ApplicationController
 end
 ```
 
-To remove authorization checks, simply call `permit!` on an instance of a presenter.
-
-There is also a `filter` method to help you with tables:
+There is also a `select_permitted` method to help you with tables. For example, we use `select_permitted` below to check which of the columns are visible.
 
 ```erb
 <% fields = { :username => "Username", :name => "Name", :email => "E-mail" } %>
 <table>
   <tr>
-    <% @users_presenter.filter( *fields.keys ) do |key| %>
+    <% @users_presenter.select_permitted( *fields.keys ) do |key| %>
       <th><%= fields[key] %></th>
     <% end %>
   </tr>
@@ -222,9 +229,6 @@ There is also a `filter` method to help you with tables:
 </table>
 ```
 
-Here, we use filter to check which of the columns are visible, just like `presents` does. It returns an
-array of only the visible columns, and we use our `fields` hash to label it.
-
 We can decide what attributes to present based on a GET parameter input, for example:
 
 ```erb
@@ -233,31 +237,82 @@ We can decide what attributes to present based on a GET parameter input, for exa
 <% end %>
 ```
 
-Because of the `permit` checks, there is no danger that private information will be revealed.
+Because of the we permit each attribute individually, there is no danger that private information will be revealed.
 
-#### Permissions Paths
+#### Associations - Permissions Paths
 
-Association methods can be permitted by passing an array.
+We can permit association attributes by passing an array of symbols. For example, we might normally get an Article&#39;s author using `@article.author.name`. If we permit it:
 
-```rb
-@article_presenter.permit :body, [:author, :name]
+```ruby
+@article_presenter.permit! [:author, :name]
 ```
 
-Then, presenting it:
+then we can use the `present` method to display it:
 
 ```erb
-<%= @article_presenter.present [:author, :name] %>
+<% @article_presenter.present [:author, :name] do |value| %>
+  By <%= value %>
+<% end %>
 ```
 
-is equivalent to `@article_presenter.author.name`, except it includes the permission check.
+#### Wildcards
 
-#### Permissions Groups
+To permit every attribute in a presenter, we can use wildcards. For example, to allow the display of all attributes in the article, we can call:
 
-Currently, each group of presenters shares a single permissions object. Therefore, each element in a collection references the same permissions object. The presenter for each association also shares the same permissions object. This means that permitting a method will permit it for all presenters in the group, and it is not possible for two presenters in the same collection to have different methods permitted.
+```ruby
+@article_presenter.permit! :*
+```
 
-Everytime you get a presenter through a collection or association, it will be added to the permissions group. To start a new group, you will need to initialize it yourself.
+We can then present any attribute:
 
-It is the intention that in version 0.2.0, permissions groups (for efficiency in a simple implementation), will be removed, and each new presenter will implement copy on write with the permissions object. This will retain efficiency where `permit` is called early before forking new presenters, but allow different permissions for each presenter. This will change the behaviour of what is considered permitted, but if `permit` is called before using the presenter, the behaviour will not change.
+```ruby
+@article_presenter.present :text
+```
+
+However, association attributes will not be permitted, for example, `@article_presenter.author.name`. To allow those, we can use the wildcard in an array:
+
+```ruby
+@article_presenter.permit! [:author, :*]
+```
+
+It is also possible to permit all association attributes:
+
+```ruby
+@article_presenter.permit! :**
+```
+
+Note that the wildcard can only be used as the last element, so for example, `[:*, :name]` is not treated as a wildcard.
+
+Instead of the single wildcard `:*`, we can simply call `permit_all!` on the presenter.
+
+Any attribute permitted by a wildcard will show up using the `presents` method, except when the argument is tainted. For example, if we used `@article_presenter.permit! :**`, and in our view, had:
+
+```erb
+<% @article_presenter.presents :title, "subtitle".taint, [:author, :name].taint, ["author".taint, :email], :text do |value| %>
+  <%= value %><br>
+<% end %>
+```
+
+then `:title` and `:text` attributes will be displayed, but the other tainted attributes will not be displayed. For example, attributes constructed using the `params` hash will be tainted. This is a security measure to prevent a bug similar to the mass-assignment vulnerability, where an arbitrary presenter method can be called.
+
+#### Association Permissions
+
+Association presenters will automatically inherit the permissions of its parent, and any new permissions will be propagated to the association presenter. For example:
+
+```ruby
+@article_presenter.permit! [:author, :name]
+@author_presenter = @article_presenter.author
+@author_presenter.present(:name) # this is permitted
+@article_presenter.permit! [:author, :email]
+@author_presenter.present(:email) # now this is also permitted
+```
+
+Attributes permitted by an item in a collection will not be permitted on the siblings:
+
+```ruby
+@articles_presenter[0].permit! :author
+@articles_presenter[1].present(:author) # not permitted
+```
 
 ### Testing
 
@@ -273,7 +328,7 @@ In tests, a view context is built to access helper methods. By default, it will 
 StrongPresenter::ViewContext.test_strategy :fast
 ```
 
-In doing so, your presenters will no longer have access to your application''s helpers. If you need to selectively include such helpers, you can pass a block:
+In doing so, your presenters will no longer have access to your application&#39;s helpers. If you need to selectively include such helpers, you can pass a block:
 
 ```ruby
 StrongPresenter::ViewContext.test_strategy :fast do
