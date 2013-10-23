@@ -255,6 +255,28 @@ then we can use the `present` method to display it:
 <% end %>
 ```
 
+It is also possible to include arguments. If our presenter method takes 1 argument:
+
+```ruby
+class ArticlePresenter < StrongPresenter::Presenter
+  def comment_text(index)
+    object.comments[index].text
+  end
+end
+```
+
+Our view can call the method using:
+
+```erb
+<% @article_presenter.permit! [:comment_text, 3] %>
+<%= @article_presenter.present [:comment_text, 3] # this is displayed %>
+<%= @article_presenter.present [:comment_text, 4] # this is not %>
+```
+
+Basically, if the first element is an association, the next element will be the method name instead, and so on. When the final method is determined, extra elements in the array are passed as arguments.
+
+When considering whether the permission path (including arguments) is permitted, it is indifferent to the difference between strings and symbols. So permitting a particular string argument will also permit the symbol argument.
+
 #### Wildcards
 
 To permit every attribute in a presenter, we can use wildcards. For example, to allow the display of all attributes in the article, we can call:
