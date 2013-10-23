@@ -1,8 +1,8 @@
 # StrongPresenter Changelog
 
-## 0.2.0 In development
+## 0.2.0
 
-This release focuses on tightening up security of the permit interface
+This release focuses on tightening up security of the permit interface, along with a number of bug fixes.
 
 - Renamed `permit` to `permit!` in Presenter, CollectionPresenter, Permissible
 - Renamed `filter` to `select_permitted` in Presenter, CollectionPresenter, Permissible
@@ -16,7 +16,7 @@ This release focuses on tightening up security of the permit interface
   - but permitting on a presenter will propagate permissions to the presenters of associations or collection items. This can be inefficient if an object has many associations or the collection has many items. It is recommended that `permit!` is called before associations or collection items are loaded
 - Added `reload!`, which will reset the cache on association or collection presenters. This might be used if the underlying object has changed.
 
-## 0.1.0 - Stable
+## 0.1.0
 
 - Copied features from Draper gem (thanks):
   - spec/spec_helper.rb, spec/integration, spec/dummy - much easier for me, since I have difficulties trying to get a dummy app working.
