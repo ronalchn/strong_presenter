@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = StrongPresenter::VERSION
   gem.authors       = ["Ronald Chan"]
   gem.email         = ["ronalchn@gmail.com"]
-  gem.description   = %q{strong_presenter lets you add presenters to your application, along with strong_parameters-inspired permit logic to handle mass presentations, where each user may have permision to view different fields}
-  gem.summary       = %q{strong_presenter lets you add presenters to your application, along with strong_parameters-inspired permit logic to handle mass presentations, where each user may have permision to view different fields}
+  gem.description   = %q{strong_presenter adds a layer of presentation logic to your application, and gives you strong_parameters-like logic to determine which attributes are visible}
+  gem.summary       = %q{strong_presenter adds a layer of presentation logic to your application, and gives you strong_parameters-like logic to determine which attributes are visible}
   gem.homepage      = "https://github.com/ronalchn/strong_presenter"
 
   gem.files         = `git ls-files`.split($/)
