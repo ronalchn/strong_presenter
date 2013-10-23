@@ -96,7 +96,7 @@ module StrongPresenter
       end
     end
 
-    describe "Collection" do
+    describe "::Collection" do
       it "finds corresponding collection presenter" do
         expect(ProductPresenter::Collection).to be ProductsPresenter
       end
@@ -113,6 +113,12 @@ module StrongPresenter
 
       it "infers presenter on collection presenter" do
         expect(ProductPresenter::Collection.send :presenter_class).to be ProductPresenter
+      end
+
+      it "uses correct collection with chained inheritance" do
+        stub_const("NewProductPresenter", Class.new(ProductPresenter))
+
+        expect(NewProductPresenter::Collection.send :presenter_class).to be NewProductPresenter
       end
     end
   end
