@@ -45,7 +45,7 @@ Or to use the edge version, add this to your Gemfile:
 
 ### Writing Presenters
 
-Presenters are stored in `app/presenters`, they inherit from `StrongPresenter::BasePresenter` and are named based on the model they decorate. We also recommend you create an `ApplicationPresenter`.
+Presenters are stored in `app/presenters`, they inherit from `StrongPresenter::Presenter` and are named based on the model they decorate. We also recommend you create an `ApplicationPresenter`.
 
 ```ruby
 # app/presenters/user_presenter.rb
