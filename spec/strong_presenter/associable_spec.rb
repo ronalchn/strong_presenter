@@ -14,6 +14,8 @@ module StrongPresenter
         Product.send(:define_method, :manufacturer) { @manufacturer ||= Manufacturer.new }
         Product.send(:define_method, :name) { "Product" }
         ProductPresenter.presents_association :manufacturer
+        ManufacturerPresenter.presents_association :source
+        Manufacturer.send(:define_method, :source) { @manufacturer ||= Manufacturer.new }
 
         @product_presenter = ProductPresenter.new(Product.new)
       end
@@ -32,6 +34,11 @@ module StrongPresenter
 
       it 'does not allow presenting from association' do
         expect(@product_presenter.manufacturer.presents :name).to be_empty
+      end
+
+      it 'presents nested assocations' do
+        @product_presenter.permit! :**
+        expect(@product_presenter.present [:manufacturer, :source, :name]).to eq "Presented Factory"
       end
 
       context 'with association methods permitted' do
