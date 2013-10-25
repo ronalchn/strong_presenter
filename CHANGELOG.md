@@ -1,5 +1,9 @@
 # StrongPresenter Changelog
 
+## 0.2.1
+
+- Bug fix: `presents` with nested associations
+
 ## 0.2.0
 
 This release focuses on tightening up security of the permit interface, along with a number of bug fixes.
