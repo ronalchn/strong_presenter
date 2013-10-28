@@ -1,9 +1,9 @@
 module StrongPresenter
   class Presenter
     include StrongPresenter::ViewHelpers
-    include StrongPresenter::Permissible
     include StrongPresenter::Associable
     include StrongPresenter::Delegation
+    include StrongPresenter::Displayable
 
     include ActiveModel::Serialization
     include ActiveModel::Serializers::JSON
@@ -25,84 +25,9 @@ module StrongPresenter
       yield self if block_given?
     end
 
-    # Performs mass presentation - if it is allowed, subject to `permit`. To permit all without checking, call `permit!` first.
-    #
-    # Presents and returns the result of each field in the argument list. If a block is given, then each result
-    # is passed to the block. Each field is presented by calling the method on the presenter.
-    #
-    #   user_presenter.presents :username, :email # returns [user_presenter.username, user_presenter.email]
-    #
-    # Or with two arguments, the name of the field is passed first:
-    #
-    #   <ul>
-    #     <% user_presenter.presents :username, :email, :address do |field, value| %>
-    #       <li><%= field.capitalize %>: <% value %></li>     
-    #     <% end %>
-    #   </ul>
-    #
-    # If only the presented value is desired, use `each`:
-    #
-    #   <% user_presenter.presents(:username, :email).each do |value| %>
-    #     <td><%= value %></td>
-    #   <% end %>
-    #
-    # A field can have arguments in an array:
-    #
-    #   user_presenter.presents :username, [:notifications, :unread] # returns [user_presenter.username, user_presenter.notifications(:unread)]
-    #
-    # Notice that this interface allows you to concisely put authorization logic in the controller, with a dumb view layer:
-    #
-    #   # app/controllers/users_controller.rb
-    #   class UsersController < ApplicationController
-    #     def visible_params
-    #       @visible_params ||= begin
-    #         field = [:username]
-    #         field << :email if can? :read_email, @user
-    #         field << :edit_link if can? :edit, @user
-    #       end
-    #     end
-    #     def show
-    #       @users_presenter = UserPresenter.wrap_each(User.all).permit!
-    #     end
-    #   end
-    #
-    #   # app/views/users/show.html.erb
-    #   <table>
-    #     <tr>
-    #       <% visible_params.each do |field| %>
-    #         <th><%= field %></th>
-    #       <% end %>
-    #     </tr>
-    #     <% @users_presenter.each do |user_presenter| %>
-    #       <tr>
-    #         <% user_presenter.presents(*visible_params).each do |value| %>
-    #           <td><%= value %></td>
-    #         <% end %>
-    #       </tr>
-    #     <% end %>
-    #   </table>
-    #
-    def presents *attributes
-      select_permitted(*attributes).map do |args|
-        args = Array(args)
-        obj = self # drill into associations
-        while (args.size > 1) && obj.class.respond_to?(:presenter_associations, true) && obj.class.send(:presenter_associations).include?(args[0]) do
-          obj = obj.public_send args.slice!(0)
-        end
-        value = obj.public_send *args # call final method with args
-        yield args[0], value if block_given?
-        value
-      end
-    end
-
-    # Same as presents, but for a single attribute. The differences are:
-    #   - the return value is not in an Array
-    #   - passes the value only (without attribute key as the 1st argument) to a block
-    def present field
-      presents field do |key, value|
-        yield value if block_given?
-      end.first
-    end
+    # deprecated
+    alias_method :presents, :displays
+    alias_method :present, :display
 
     delegate :to_s
 
