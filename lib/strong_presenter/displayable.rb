@@ -30,12 +30,17 @@ module StrongPresenter
     #
     def displays *attributes
       select_permitted(*attributes).map do |args|
-        args = Array(args)
-        obj = self # drill into associations
-        while (args.size > 1) && obj.class.respond_to?(:presenter_associations, true) && obj.class.send(:presenter_associations).include?(args[0]) do
-          obj = obj.public_send args.slice!(0)
+        args = Array(args).dup
+        value = self
+        until args.empty? do
+          arity = value.method(args[0]).arity
+          if arity >= 0
+            value = value.public_send *args.slice!(0, arity+1)
+          else
+            value = value.public_send *args
+            break
+          end
         end
-        value = obj.public_send *args # call final method with args
         yield args[0], value if block_given?
         value
       end
