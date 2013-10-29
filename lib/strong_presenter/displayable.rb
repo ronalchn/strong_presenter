@@ -29,8 +29,8 @@ module StrongPresenter
     #   user.displays :username, [:notifications, :unread] # returns [user.username, user.notifications(:unread)]
     #
     def displays *attributes
-      select_permitted(*attributes).map do |args|
-        args = Array(args).dup
+      select_permitted(*attributes).map do |attribute|
+        args = Array(attribute).dup
         value = self
         until args.empty? do
           arity = value.method(args[0]).arity
@@ -41,7 +41,7 @@ module StrongPresenter
             break
           end
         end
-        yield args[0], value if block_given?
+        yield attribute, value if block_given?
         value
       end
     end
