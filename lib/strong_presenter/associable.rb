@@ -3,7 +3,7 @@ module StrongPresenter
   # Methods for defining presenter associations
   module Associable
     extend ActiveSupport::Concern
-    include StrongPresenter::Permissible
+    include StrongAttributes::Permissible
 
     module ClassMethods
       #   Automatically wraps multiple associations.
@@ -57,7 +57,6 @@ module StrongPresenter
     end
 
     # Permits given attributes, with propagation to associations.
-    # @param (see StrongPresenter::Permissible#permit!)
     def permit! *attribute_paths
       super
       attribute_paths.each do |path| # propagate permit to associations

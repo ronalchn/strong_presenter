@@ -11,14 +11,13 @@ require 'active_support/core_ext/hash/keys'
 require 'active_support/core_ext/hash/reverse_merge'
 require 'active_support/core_ext/name_error'
 
+require "strong_attributes"
+
 require "strong_presenter/version"
 require "strong_presenter/view_helpers"
 require "strong_presenter/helper_proxy"
 require "strong_presenter/view_context"
 require "strong_presenter/delegation"
-require "strong_presenter/permissions"
-require "strong_presenter/permissible"
-require "strong_presenter/displayable"
 require "strong_presenter/associable"
 require "strong_presenter/inferrer"
 require "strong_presenter/presenter"

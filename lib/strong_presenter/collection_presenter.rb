@@ -2,8 +2,8 @@ module StrongPresenter
   class CollectionPresenter
     include Enumerable
     include StrongPresenter::ViewHelpers
-    include StrongPresenter::Permissible
     include StrongPresenter::Delegation
+    include StrongAttributes::Permissible
 
     array_methods = Array.instance_methods - Object.instance_methods
     delegate :==, :as_json, *array_methods, to: :collection
@@ -23,7 +23,6 @@ module StrongPresenter
     end
 
     # Permits given attributes, with propagation to collection items.
-    # @param (see StrongPresenter::Permissible#permit!)
     def permit! *attribute_paths
       super
       @collection.each { |presenter| presenter.permit! *attribute_paths } unless @collection.nil?

@@ -3,7 +3,7 @@ module StrongPresenter
     include StrongPresenter::ViewHelpers
     include StrongPresenter::Associable
     include StrongPresenter::Delegation
-    include StrongPresenter::Displayable
+    include StrongAttributes::Displayable
 
     include ActiveModel::Serialization
     include ActiveModel::Serializers::JSON
