@@ -37,7 +37,7 @@ module StrongPresenter
       end
 
       it 'presents nested assocations' do
-        @product_presenter.permit! :**
+        @product_presenter.permit! [:manufacturer, :source, :name]
         expect(@product_presenter.present [:manufacturer, :source, :name]).to eq "Presented Factory"
       end
 
@@ -271,12 +271,6 @@ module StrongPresenter
         @product_presenter.subproducts[0].permit! :price
         @product_presenter.permit! [:subproducts, :name]
         expect(@product_presenter.subproducts[0].presents(:name, :price, :description)).to eq ["Sub A", 8]
-      end
-
-      it 'propagates double wildcard' do
-        @product_presenter.subproducts[0].permit! :price
-        @product_presenter.permit! :**
-        expect(@product_presenter.subproducts[0].presents(:name, "price", :description)).to eq ["Sub A", 8, "Small"]
       end
 
       it 'does not propagate single wildcard' do

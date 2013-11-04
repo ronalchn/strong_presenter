@@ -22,7 +22,7 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'actionpack', '>= 3.0'
   gem.add_dependency 'request_store', '~> 1.0.3'
   gem.add_dependency 'activemodel', '>= 3.0'
-  gem.add_dependency 'strong_attributes', '~> 0.0.1'
+  gem.add_dependency 'strong_attributes', '~> 0.0.2'
 
   gem.add_development_dependency 'ammeter'
   gem.add_development_dependency 'rake', '>= 0.9.2'

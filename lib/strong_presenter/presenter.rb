@@ -25,10 +25,6 @@ module StrongPresenter
       yield self if block_given?
     end
 
-    # deprecated
-    alias_method :presents, :displays
-    alias_method :present, :display
-
     delegate :to_s
 
     # In case object is nil
