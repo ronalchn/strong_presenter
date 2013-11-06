@@ -3,6 +3,8 @@
 ## 0.2.1
 
 - Bug fix: `presents` with nested associations
+- remove arguments from permission checking - complex and potentially very inefficient
+- extract permissions into separate gem
 
 ## 0.2.0
 
